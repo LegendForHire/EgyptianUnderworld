@@ -1,24 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MeleeEnemy : Enemy
 {
     private Vector3 searchHere;
     private float searchRadius = 2f;
     private float alertDistance = 5f;
+    private float attackDamage = -.4f;
+    private static float nextHit = 0;
+
+    [SerializeField] private Image playerHealth;
 
     internal override void Awake()
     {
         base.Awake();
         currentState = new PatrollingState(this);
-        searchingDuration = 30f;
+        searchingDuration = 10f;
         sightRange = 20f;
-        attackRange = 5f;
+        attackRange = 3f;
 
     }
     internal override void Attack()
     {
+        Debug.Log(playerHealth.fillAmount - attackDamage);
+        playerHealth.fillAmount += attackDamage;
     }
     internal override void Search()
     {
@@ -61,14 +68,21 @@ public class MeleeEnemy : Enemy
     {
         public AttackState(MeleeEnemy enemy) : base(enemy)
         {
+            enemy.searchHere = enemy.player.transform.position;
+            enemy.attackRate = 1.5f;
         } 
 
         public override void Update()
         {
+            if (Time.time > nextHit){
+                nextHit = Time.time + enemy.attackRate;
+                enemy.Attack();
+            }
+           
             if (!enemy.PlayerInRange()) enemy.currentState = new ChasingState((MeleeEnemy)enemy);
             if (!enemy.SeesPlayer()) enemy.currentState = new AlertedState((MeleeEnemy)enemy);
 
-            enemy.Attack();
+            
         }
 
     }
@@ -83,7 +97,6 @@ public class MeleeEnemy : Enemy
         {
             if (enemy.Alerted())
             {
-
                 enemy.currentState = new AlertedState((MeleeEnemy)enemy);
             }
             if (enemy.SeesPlayer()) enemy.currentState = new ChasingState((MeleeEnemy)enemy);

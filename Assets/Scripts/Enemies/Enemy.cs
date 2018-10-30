@@ -37,6 +37,7 @@ public abstract class Enemy : MonoBehaviour
     internal float searchingDuration;
     internal Transform lastSeenOrHeard;
     internal float attackRange;
+    internal float attackRate;
 
     internal virtual void Awake()
 	{
@@ -120,6 +121,7 @@ public abstract class Enemy : MonoBehaviour
     {
         return searchTimer > searchingDuration;
     }
+
     internal abstract void Attack();
     internal abstract void Search();
     internal abstract bool Alerted();
