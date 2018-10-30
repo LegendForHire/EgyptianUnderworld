@@ -20,6 +20,10 @@ public class RangedEnemy : Enemy {
     {
 
     }
+    internal override bool Alerted()
+    {
+        return false;
+    }
     class AlertedState : State
     {
         public AlertedState(Enemy enemy) : base(enemy)
@@ -53,10 +57,13 @@ public class RangedEnemy : Enemy {
     {
         public PatrollingState(Enemy enemy) : base(enemy)
         {
+            if (enemy.Alerted()) enemy.currentState = new AlertedState(enemy);
+            if (enemy.SeesPlayer()) enemy.currentState = new AttackState(enemy);
             enemy.sightRange = 40f;
         }
         public override void Update()
         {
+
             enemy.Patrol();
         }
     }

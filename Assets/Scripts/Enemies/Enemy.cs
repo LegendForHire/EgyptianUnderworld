@@ -18,20 +18,17 @@ public abstract class Enemy : MonoBehaviour
 
 
 	// This deals with all the navigation between way points.
-	private UnityEngine.AI.NavMeshAgent navMeshAgent;
+	internal UnityEngine.AI.NavMeshAgent navMeshAgent;
 	// The points the enemy travels between
     public Transform[] wayPoints;
 	// And where we are on the path
 	private int nextWayPoint;
-
-
-    [SerializeField] public GameObject player;
     // Empty Game object created at eye level
     public Transform eyes;
 	// Lift the look vector so he looks for the head, not the feet when chasing the player.
 	// Otherwise, it is too hard to hide from the enemy.
 	private Vector3 offset = new Vector3 (0,.5f,0);
-
+    [SerializeField] public GameObject player;
     // Store ref to player transform so I know where to chase to.
     private Transform chaseTarget;
     internal State currentState;
@@ -50,11 +47,12 @@ public abstract class Enemy : MonoBehaviour
 	public virtual void Update () 
 	{
         currentState.Update();
+        Debug.Log(currentState.ToString());
 	}
 
     internal virtual bool PlayerInRange(){
         if(chaseTarget != null){
-            if (Math.Abs(Vector3.Distance(this.transform.position, chaseTarget.position))< attackRange) return true;
+            if (Math.Abs(Vector3.Distance(this.transform.position, player.transform.position))< attackRange) return true;
         }
         return false;
     }
@@ -89,6 +87,7 @@ public abstract class Enemy : MonoBehaviour
             // no need to search
             searchTimer = 0f;
             chaseTarget = hit.transform;
+            lastSeenOrHeard = chaseTarget;
             return true;
         }
         else
@@ -123,4 +122,5 @@ public abstract class Enemy : MonoBehaviour
     }
     internal abstract void Attack();
     internal abstract void Search();
+    internal abstract bool Alerted();
 }
