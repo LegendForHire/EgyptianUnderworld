@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{631CE849-CCF5-3FAD-6FDB-410DB4F173CE}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemies/MeleeEnemy.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Enemies/Enemy.cs" Line="22" Column="51" />
+      <File FileName="Assets/Scripts/Enemies/MeleeEnemy.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/RangedEnemy.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
