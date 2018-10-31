@@ -48,7 +48,6 @@ public abstract class Enemy : MonoBehaviour
 	public virtual void Update () 
 	{
         currentState.Update();
-        Debug.Log(currentState.ToString());
 	}
 
     internal virtual bool PlayerInRange(){

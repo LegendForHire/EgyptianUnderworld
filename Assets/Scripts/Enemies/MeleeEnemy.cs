@@ -24,7 +24,7 @@ public class MeleeEnemy : Enemy
     }
     internal override void Attack()
     {
-        Debug.Log(playerHealth.fillAmount - attackDamage);
+        Debug.Log(playerHealth.fillAmount + attackDamage);
         playerHealth.fillAmount += attackDamage;
     }
     internal override void Search()
