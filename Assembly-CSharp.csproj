@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Enemies\MeleeEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\RangedEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemies\State.cs" />
+    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Arrow.cs" />
     <Compile Include="Assets\ThirdParty\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
     <Compile Include="Assets\ThirdParty\Standard Assets\Cameras\Scripts\AutoCam.cs" />
     <Compile Include="Assets\ThirdParty\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />

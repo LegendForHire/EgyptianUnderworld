@@ -46,6 +46,15 @@ public class MeleeEnemy : Enemy
         lastSeenOrHeard = player.transform;
         return Vector3.Distance(player.transform.position, transform.position) < alertDistance;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Weapon")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     class AlertedState : State
     {
         public AlertedState(MeleeEnemy enemy) : base(enemy)
