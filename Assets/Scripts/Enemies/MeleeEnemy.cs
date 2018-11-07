@@ -8,10 +8,8 @@ public class MeleeEnemy : Enemy
     private Vector3 searchHere;
     private float searchRadius = 2f;
     private float alertDistance = 5f;
-    private float attackDamage = -.4f;
+    private float attackDamage = .4f;
     private static float nextHit = 0;
-
-    [SerializeField] private Image playerHealth;
 
     internal override void Awake()
     {
@@ -24,8 +22,8 @@ public class MeleeEnemy : Enemy
     }
     internal override void Attack()
     {
-        Debug.Log(playerHealth.fillAmount + attackDamage);
-        playerHealth.fillAmount += attackDamage;
+        Debug.Log("Hit" + attackDamage);
+        PlayerHealth.Instance.TakeDamage(attackDamage);
     }
     internal override void Search()
     {
