@@ -47,6 +47,9 @@ public class Player : MonoBehaviour
         if (equipable != null){
             equipable.transform.parent = transform.parent;
             equipped = equipable;
+            Vector3 thisPos = transform.position;
+            Vector3 pos = new Vector3(thisPos.z + -1f, thisPos.y, thisPos.z + 1f);
+            equipped.gameObject.transform.position = pos;
         }
     }
     public void Use(){
