@@ -68,8 +68,10 @@
     <Compile Include="Assets\Scripts\Enemies\State.cs" />
     <Compile Include="Assets\Scripts\Equipable\Equipable.cs" />
     <Compile Include="Assets\Scripts\Equipable\Weapons\Arrow.cs" />
+    <Compile Include="Assets\Scripts\Equipable\Weapons\Bow.cs" />
     <Compile Include="Assets\Scripts\Equipable\Weapons\Sword.cs" />
     <Compile Include="Assets\Scripts\Equipable\Weapons\Weapon.cs" />
+    <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerAttack.cs" />

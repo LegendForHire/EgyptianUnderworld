@@ -9,7 +9,7 @@ public class Sword : Weapon {
       
     }
 
-    public override void playerAttack(Player player)
+    public override void playerUse(Player player)
     {
 
     }
