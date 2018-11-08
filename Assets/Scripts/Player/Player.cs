@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -55,4 +56,5 @@ public class Player : MonoBehaviour
     public void Use(){
         if (equipped != null)equipped.playerUse(this);
     }
+
 }
