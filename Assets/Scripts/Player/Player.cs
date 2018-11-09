@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
             equipable.transform.parent = transform;
             equipped = equipable;
             equipped.gameObject.transform.localPosition = new Vector3(.8f, -.2f, 1);
-            equipped.transform.localEulerAngles = new Vector3(90,120,0);
+            equipped.transform.localEulerAngles = new Vector3(-90,120,0);
 
         }
     }
