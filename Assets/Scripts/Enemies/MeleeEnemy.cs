@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MeleeEnemy : Enemy
-{
+public class MeleeEnemy : Enemy {
+
     private Vector3 searchHere;
     private float searchRadius = 2f;
     private float alertDistance = 5f;
     private float attackDamage = .4f;
     private static float nextHit = 0;
 
-    internal override void Awake()
-    {
+    private ILevel level;
+
+    private void Start() {
+        level = GameObject.Find("Level").GetComponent<ILevel>();
+    }
+
+    internal override void Awake() {
         base.Awake();
         currentState = new PatrollingState(this);
         searchingDuration = 10f;
@@ -20,13 +25,13 @@ public class MeleeEnemy : Enemy
         attackRange = 3f;
 
     }
-    internal override void Attack()
-    {
+
+    internal override void Attack() {
         Debug.Log("Hit" + attackDamage);
         PlayerHealth.Instance.TakeDamage(attackDamage);
     }
-    internal override void Search()
-    {
+
+    internal override void Search() {
         searchTimer += Time.deltaTime;
         navMeshAgent.destination = searchHere;
         navMeshAgent.isStopped = false;
@@ -39,31 +44,28 @@ public class MeleeEnemy : Enemy
         }
 
     }
-    internal override bool Alerted()
-    {
+
+    internal override bool Alerted() {
         lastSeenOrHeard = player.transform;
         return Vector3.Distance(player.transform.position, transform.position) < alertDistance;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Weapon")
-        {
+    private void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "Weapon") {
+            level.GuardKilled();
             Destroy(this.gameObject);
         }
     }
 
-    class AlertedState : State
-    {
-        public AlertedState(MeleeEnemy enemy) : base(enemy)
-        {
+    // Enemy alerted state, search for the player
+    class AlertedState : State {
+        public AlertedState(MeleeEnemy enemy) : base(enemy) {
             enemy.searchTimer = 0;
             enemy.searchHere = enemy.player.transform.position;
             enemy.sightRange = 40f;
         }
 
-        public override void Update()
-        {
+        public override void Update() {
             if (enemy.SeesPlayer()) enemy.currentState = new ChasingState((MeleeEnemy)enemy);
             if (enemy.SearchOver()) enemy.currentState = new PatrollingState((MeleeEnemy)enemy);
             if (enemy.Alerted()) enemy.currentState = new AlertedState((MeleeEnemy)enemy);
@@ -71,16 +73,15 @@ public class MeleeEnemy : Enemy
         }
 
     }
-    class AttackState : State
-    {
-        public AttackState(MeleeEnemy enemy) : base(enemy)
-        {
+
+    // Enemy attacking state, try to kill the player
+    class AttackState : State {
+        public AttackState(MeleeEnemy enemy) : base(enemy) {
             enemy.searchHere = enemy.player.transform.position;
             enemy.attackRate = 1.5f;
         } 
 
-        public override void Update()
-        {
+        public override void Update() {
             if (Time.time > nextHit){
                 nextHit = Time.time + enemy.attackRate;
                 enemy.Attack();
@@ -93,17 +94,15 @@ public class MeleeEnemy : Enemy
         }
 
     }
-    class PatrollingState : State
-    {
-        public PatrollingState(MeleeEnemy enemy) : base(enemy)
-        {
-            enemy.sightRange = 20f;
+
+    // Base state for the MeleeEnemy, just patrol and look for the player
+    class PatrollingState : State {
+        public PatrollingState(MeleeEnemy enemy) : base(enemy) {
+            enemy.sightRange = 30;
         }
 
-        public override void Update()
-        {
-            if (enemy.Alerted())
-            {
+        public override void Update() {
+            if (enemy.Alerted()) {
                 enemy.currentState = new AlertedState((MeleeEnemy)enemy);
             }
             if (enemy.SeesPlayer()) enemy.currentState = new ChasingState((MeleeEnemy)enemy);
@@ -111,18 +110,16 @@ public class MeleeEnemy : Enemy
         }
     }
 
-    class ChasingState : State
-    {
-        public ChasingState(MeleeEnemy enemy) : base(enemy)
-        {
+    // Chasing player state, either attack or go alert after chase
+    class ChasingState : State {
+        public ChasingState(MeleeEnemy enemy) : base(enemy) {
             enemy.searchHere = Vector3.negativeInfinity;
         }
 
-        public override void Update()
-        {
+        public override void Update() {
             enemy.Chase();
 
-            if (!enemy.SeesPlayer())enemy.currentState= new AlertedState((MeleeEnemy)enemy);
+            if (!enemy.SeesPlayer()) enemy.currentState= new AlertedState((MeleeEnemy)enemy);
             if (enemy.PlayerInRange()) enemy.currentState = new AttackState((MeleeEnemy)enemy);
         }
     }

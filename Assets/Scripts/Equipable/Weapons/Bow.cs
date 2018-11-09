@@ -6,25 +6,24 @@ public class Bow : Weapon
 {
     [SerializeField] private Arrow arrowPrefab;
 
-    public override void enemyAttack()
-    {
+    public override void enemyAttack() {
 
     }
 
-    public override void playerUse(Player player)
-    {
+    public override void playerUse(Player player) {
         //drawBow();
         Fire(20f);
     }
-    IEnumerator drawBow()
-    {
+
+    IEnumerator drawBow() {
         bool mouseRealeased = false;
         yield return new WaitUntil(() => !mouseRealeased);
         Fire(20f);
         
     }
-    void Fire(float speed)
-    {
+
+    // Instantiate an arrow and shoot it
+    void Fire(float speed) {
         Arrow arrow = Instantiate(arrowPrefab);
         Vector3 Hrotation = transform.parent.transform.localEulerAngles;
         Vector3 Vrotation = transform.parent.transform.parent.transform.localEulerAngles;

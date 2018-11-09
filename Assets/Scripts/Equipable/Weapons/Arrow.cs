@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour {
-	public float speed = 20f;
+	public float speed = 40F;
 	public bool inMotion = false;
+
+    private int arrowLife = 10;
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(DestroyAfter20());
+        StartCoroutine(DestroyAfter(arrowLife));
 	}
 
 	// Update is called once per frame
@@ -26,8 +28,8 @@ public class Arrow : MonoBehaviour {
         if (collision.gameObject.name.Contains("Enemy")) Destroy(this.gameObject);
 	}
 
-	private IEnumerator DestroyAfter20() {
-		yield return new WaitForSeconds(20);
+	private IEnumerator DestroyAfter(int time) {
+		yield return new WaitForSeconds(time);
 		Destroy(this.gameObject);
 	}
 }

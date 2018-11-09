@@ -3,26 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
     private Equipable equipped;
     private float equipRange = 4f;
     private Equipable equipable;
     [SerializeField] private InputManager inputs;
 
+    private ILevel level;
+
     // Use this for initialization
-    void Start (){
+    void Start () {
         equipable = null;
         equipped = null;
         inputs.RegisterKey("f", Equip);
         inputs.RegisterMouseButton(Use);
+        level = GameObject.Find("Level").GetComponent<ILevel>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         OnSeesEquipable();
 	}
-    void OnSeesEquipable(){
+
+    // Create halo glow on equipable object the player sees
+    void OnSeesEquipable() {
         RaycastHit hit;
         Vector3 lookVector = transform.forward;
         Vector3 pos = transform.position;
@@ -35,27 +39,27 @@ public class Player : MonoBehaviour
             if (halo != null) halo.enabled = true;
 
         }
-        else
-        {
-            if (equipable != null)
-            {
+        else {
+            if (equipable != null) {
                 Behaviour halo = (UnityEngine.Behaviour)equipable.GetComponent("Halo");
                 if (halo != null) halo.enabled = false;
             }
             equipable = null;
-
         }
     }
-    public void Equip(){
-        if (equipable != null){
+
+    // Pick up a weapon
+    public void Equip() {
+        if (equipable != null) {
             equipable.transform.parent = transform;
             equipped = equipable;
             equipped.gameObject.transform.localPosition = new Vector3(.8f, -.2f, 1);
             equipped.transform.localEulerAngles = new Vector3(-90,120,0);
-
+            level.GotWeapon();
         }
     }
-    public void Use(){
+
+    public void Use() {
         if (equipped != null)equipped.playerUse(this);
     }
 

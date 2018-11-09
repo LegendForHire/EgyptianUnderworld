@@ -16,17 +16,10 @@ public class SceneChanger : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter(Collision collision) {
-		Debug.Log("Here bitch");
-
-		
-	}
-
+    // Load scene according to this SceneChanger's tag
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.name == "SceneLoader") {
-			Debug.Log ("Got sceneloader");
 			if (level.ObjectivesComplete()) {
-				Debug.Log("Level complete");
 				SceneManager.LoadScene(other.gameObject.tag, LoadSceneMode.Single);
 			}
 		}
