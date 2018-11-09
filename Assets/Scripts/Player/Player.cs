@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     private Equipable equipped;
-    private float equipRange = 3f;
+    private float equipRange = 4f;
     private Equipable equipable;
     [SerializeField] private InputManager inputs;
 
@@ -29,28 +29,30 @@ public class Player : MonoBehaviour
         if ((Physics.Raycast(pos, lookVector, out hit, equipRange)
             && hit.collider.gameObject.GetComponent<Equipable>() != null))
         {
-            Debug.Log("sees equip");
+            
             equipable = hit.collider.gameObject.GetComponent<Equipable>();
             Behaviour halo = (UnityEngine.Behaviour)equipable.GetComponent("Halo");
             if (halo != null) halo.enabled = true;
 
         }
-        else{
-           
-            if (equipable != null){
+        else
+        {
+            if (equipable != null)
+            {
                 Behaviour halo = (UnityEngine.Behaviour)equipable.GetComponent("Halo");
-                if(halo!=null)halo.enabled = false;
+                if (halo != null) halo.enabled = false;
             }
             equipable = null;
+
         }
     }
     public void Equip(){
         if (equipable != null){
-            equipable.transform.parent = transform.parent;
+            equipable.transform.parent = transform;
             equipped = equipable;
-            Vector3 thisPos = transform.position;
-            Vector3 pos = new Vector3(thisPos.z + -1f, thisPos.y, thisPos.z + 1f);
-            equipped.gameObject.transform.position = pos;
+            equipped.gameObject.transform.localPosition = new Vector3(.8f, -.2f, 1);
+            equipped.transform.localEulerAngles = new Vector3(90,120,0);
+
         }
     }
     public void Use(){

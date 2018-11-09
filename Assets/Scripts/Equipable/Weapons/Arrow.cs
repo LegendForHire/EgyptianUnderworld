@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour {
-	private float speed = 20f;
+	public float speed = 20f;
 	public bool inMotion = false;
 
 	// Use this for initialization
@@ -21,7 +21,9 @@ public class Arrow : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision collision) {
-		Destroy(this.gameObject);
+        inMotion = false;
+        Destroy(this.GetComponent<Rigidbody>());
+        if (collision.gameObject.name.Contains("Enemy")) Destroy(this.gameObject);
 	}
 
 	private IEnumerator DestroyAfter20() {
