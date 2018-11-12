@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
+  m_IgnoreReversedGraphics: 0
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
@@ -4579,8 +4579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f3eee1008af4d4d9a7742d9f9aba3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
-    type: 2}
 --- !u!114 &1443741589
 MonoBehaviour:
   m_ObjectHideFlags: 0
