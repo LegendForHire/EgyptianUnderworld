@@ -51,9 +51,9 @@ public class Player : MonoBehaviour {
     {
         interactable.Interact(this);
     }
+
     // Pick up a weapon
     public void Equip(Equipable equipment) {
-
             if (equipped!= null) equipped.transform.parent = transform.parent.transform.parent;
             equipment.transform.parent = transform;
             equipped = equipment;
@@ -64,5 +64,10 @@ public class Player : MonoBehaviour {
 
     public void Use() {
         if (equipped != null)equipped.playerUse(this);
+    }
+
+    // Returns true if the player has a weapon equipped
+    public bool HasWeapon() {
+        return (equipped != null);
     }
 }

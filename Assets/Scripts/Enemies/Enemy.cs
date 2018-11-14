@@ -28,7 +28,7 @@ public abstract class Enemy : MonoBehaviour
 	// Lift the look vector so he looks for the head, not the feet when chasing the player.
 	// Otherwise, it is too hard to hide from the enemy.
 	private Vector3 offset = new Vector3 (0,.5f,0);
-    [SerializeField] public GameObject player;
+    [SerializeField] public Player player;
     // Store ref to player transform so I know where to chase to.
     private Transform chaseTarget;
     internal State currentState;

@@ -27,7 +27,7 @@ public class MeleeEnemy : Enemy {
     }
 
     internal override void Attack() {
-        Debug.Log("Hit" + attackDamage);
+        Debug.Log("Enemy attack for " + attackDamage);
         PlayerHealth.Instance.TakeDamage(attackDamage);
     }
 
@@ -102,6 +102,12 @@ public class MeleeEnemy : Enemy {
         }
 
         public override void Update() {
+            // never leave the patrolling state if the player is unarmed
+            if (!enemy.player.HasWeapon()) {
+                enemy.Patrol();
+                return;
+            }
+
             if (enemy.Alerted()) {
                 enemy.currentState = new AlertedState((MeleeEnemy)enemy);
             }
