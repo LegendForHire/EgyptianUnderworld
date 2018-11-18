@@ -13,12 +13,6 @@ public abstract class Attack : MonoBehaviour {
 	public virtual void Update () {
 		
 	}
-    public void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name.Contains("Enemy")){
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            enemy.Hit();
-        }
-    }
+    public abstract void OnCollisionEnter(Collision collision);
+   
 }

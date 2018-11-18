@@ -11,6 +11,7 @@ public class Sword : Weapon {
             transform.localPosition = new Vector3(.8f, -.2f, 1);
             transform.localEulerAngles = new Vector3(-90, 120, 0);
             tag = "Untagged";
+            Destroy(GetComponent<Rigidbody>());
         }
     }
     public override void enemyAttack()
@@ -21,6 +22,7 @@ public class Sword : Weapon {
     {
         if (ss == null)
         {
+            gameObject.AddComponent<Rigidbody>();
             ss = gameObject.AddComponent(typeof(SwordSwing)) as SwordSwing;
             StartCoroutine(DestroyAfterTime(.33f, ss));
         }     

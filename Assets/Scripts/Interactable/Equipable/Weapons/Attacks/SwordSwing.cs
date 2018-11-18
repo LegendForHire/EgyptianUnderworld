@@ -20,10 +20,10 @@ public class SwordSwing : Attack {
     }
     protected virtual void Swing()
     {
-        Vector3 swingPos = new Vector3(1, 1, .75f);
-        Vector3 swingPos2 = new Vector3(.33f, .33f, 1.33f);
-        Vector3 swingPos3 = new Vector3(-.33f, -.33f, 1.33f);
-        Vector3 swingPos4 = new Vector3(-1, -1, .75f);
+        Vector3 swingPos = new Vector3(1, 1, 1f);
+        Vector3 swingPos2 = new Vector3(.33f, .33f, 1.75f);
+        Vector3 swingPos3 = new Vector3(-.33f, -.33f, 1.75f);
+        Vector3 swingPos4 = new Vector3(-1, -1, 1f);
         transform.localPosition = cubeBezier3(swingPos, swingPos2, swingPos3, swingPos4, t);
         
     }
@@ -37,8 +37,13 @@ public class SwordSwing : Attack {
         float f3 = t * t * t;
         return f0 * p0 + f1 * p1 + f2 * p2 + f3 * p3;
     }
-    private void OnCollisionEnter(Collision collision)
+    public override void OnCollisionEnter(Collision collision)
     {
-
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name.Contains("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            enemy.Hit();
+        }
     }
 }

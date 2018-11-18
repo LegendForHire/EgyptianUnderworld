@@ -22,10 +22,15 @@ public class Arrow : Attack {
 		this.transform.position += transform.forward * Time.deltaTime * speed;
 	}
 
-	private void OnCollisionEnter(Collision collision) {
+	public override void OnCollisionEnter(Collision collision) {
         inMotion = false;
         Destroy(this.GetComponent<Rigidbody>());
-        if (collision.gameObject.name.Contains("Enemy")) Destroy(this.gameObject);
+        if (collision.gameObject.name.Contains("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            enemy.Hit();
+            Destroy(this.gameObject);
+        }
 	}
 
 	private IEnumerator DestroyAfter(int time) {
