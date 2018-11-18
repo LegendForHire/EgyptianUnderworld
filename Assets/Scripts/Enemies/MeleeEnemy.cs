@@ -11,11 +11,6 @@ public class MeleeEnemy : Enemy {
     private float attackDamage = .4f;
     private static float nextHit = 0;
 
-    private ILevel level;
-
-    private void Start() {
-        level = GameObject.Find("Level").GetComponent<ILevel>();
-    }
 
     internal override void Awake() {
         base.Awake();
@@ -50,12 +45,6 @@ public class MeleeEnemy : Enemy {
         return Vector3.Distance(player.transform.position, transform.position) < alertDistance;
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.tag == "Weapon") {
-            level.GuardKilled();
-            Destroy(this.gameObject);
-        }
-    }
 
     // Enemy alerted state, search for the player
     class AlertedState : State {

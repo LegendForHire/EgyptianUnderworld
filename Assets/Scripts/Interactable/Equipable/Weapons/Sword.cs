@@ -3,21 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sword : Weapon {
+    SwordSwing ss;
+    public void Update()
+    {
+        if (ss == null && equipped)
+        {
+            transform.localPosition = new Vector3(.8f, -.2f, 1);
+            transform.localEulerAngles = new Vector3(-90, 120, 0);
+            tag = "Untagged";
+        }
+    }
     public override void enemyAttack()
     {
       
     }
     public override void playerUse(Player player)
     {
-        SwordSwing ss = gameObject.AddComponent(typeof(SwordSwing)) as SwordSwing;
-        StartCoroutine(DestroyAfterTime(.33f, ss));
-        
+        if (ss == null)
+        {
+            ss = gameObject.AddComponent(typeof(SwordSwing)) as SwordSwing;
+            StartCoroutine(DestroyAfterTime(.33f, ss));
+        }     
     }
     private IEnumerator DestroyAfterTime(float t, Behaviour b)
     {
         yield return new WaitForSeconds(t);
+        if (Input.GetMouseButtonDown(0)) {
+
+            ss = gameObject.AddComponent(typeof(SwordSwing2)) as SwordSwing2;
+            StartCoroutine(DestroyAfterTime(.33f, ss));
+        }
+        else
+        {
+            ss = null;
+        }
         Destroy(b);
-        transform.localPosition = new Vector3(.8f, -.2f, 1);
-        transform.localEulerAngles = new Vector3(-90, 120, 0);
     }
 }

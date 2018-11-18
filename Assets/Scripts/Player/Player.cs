@@ -54,7 +54,10 @@ public class Player : MonoBehaviour {
 
     // Pick up a weapon
     public void Equip(Equipable equipment) {
-            if (equipped!= null) equipped.transform.parent = transform.parent.transform.parent;
+            if (equipped != null) {
+                equipped.transform.parent = transform.parent.transform.parent;
+                equipped.equipped = false;
+            }
             equipment.transform.parent = transform;
             equipped = equipment;
             equipped.gameObject.transform.localPosition = new Vector3(.8f, -.2f, 1);

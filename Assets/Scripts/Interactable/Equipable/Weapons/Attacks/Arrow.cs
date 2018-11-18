@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour {
+public class Arrow : Attack {
 	public float speed = 40F;
 	public bool inMotion = false;
 
     private int arrowLife = 10;
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
         StartCoroutine(DestroyAfter(arrowLife));
 	}
 
 	// Update is called once per frame
-	void Update () {
+	public override void Update () {
 		if (!inMotion) {
 			return;
 		}

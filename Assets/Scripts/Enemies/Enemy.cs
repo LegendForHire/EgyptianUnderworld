@@ -38,12 +38,14 @@ public abstract class Enemy : MonoBehaviour
     internal Transform lastSeenOrHeard;
     internal float attackRange;
     internal float attackRate;
+    private ILevel level;
 
     internal virtual void Awake()
 	{
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
+        level = GameObject.Find("Level").GetComponent<ILevel>();
 
-	}
+    }
 
 	public virtual void Update () 
 	{
@@ -124,4 +126,9 @@ public abstract class Enemy : MonoBehaviour
     internal abstract void Attack();
     internal abstract void Search();
     internal abstract bool Alerted();
+    public void Hit()
+    {
+        Destroy(this.gameObject);
+        level.GuardKilled();
+    }
 }

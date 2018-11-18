@@ -663,11 +663,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210159487}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipped: 0
 --- !u!1 &213589327
 GameObject:
   m_ObjectHideFlags: 0
@@ -5524,6 +5525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598384e1427849c4a778505f966f72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  equipped: 0
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1632356001
@@ -7230,6 +7232,10 @@ Prefab:
     - target: {fileID: 100000, guid: abe1aac02f797294bb58651b029b1aaf, type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: abe1aac02f797294bb58651b029b1aaf, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abe1aac02f797294bb58651b029b1aaf, type: 3}

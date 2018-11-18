@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPC : Interactable {
     [SerializeField] private string[] lines;
     private int currentline;
-    protected override void Start()
+    public override void Start()
     {
         currentline = 0;
     }
