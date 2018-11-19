@@ -73,4 +73,9 @@ public class Player : MonoBehaviour {
     public bool HasWeapon() {
         return (equipped != null);
     }
+    public void Hit()
+    {
+        Debug.Log("hitting");
+        PlayerHealth.Instance.TakeDamage(.4f);
+    }
 }

@@ -12,10 +12,7 @@ public class RangedEnemy : Enemy {
         attackRange = 80f;
 
     }
-    internal override void Attack()
-    {
 
-    }
     internal override void Search()
     {
 
@@ -33,7 +30,7 @@ public class RangedEnemy : Enemy {
 
         public override void Update()
         {
-            if (enemy.SeesPlayer()) enemy.currentState = new AttackState(enemy);
+            if (enemy.PlayerInRange()) enemy.currentState = new AttackState(enemy);
             if (enemy.SearchOver()) enemy.currentState = new PatrollingState(enemy);
             enemy.Search();
         }

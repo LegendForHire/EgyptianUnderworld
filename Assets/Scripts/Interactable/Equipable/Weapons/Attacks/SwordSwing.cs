@@ -45,5 +45,10 @@ public class SwordSwing : Attack {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.Hit();
         }
+        if (collision.gameObject.name.Contains("PlayerBody"))
+        {
+            Player player = collision.transform.parent.gameObject.GetComponent<Player>();
+            player.Hit();
+        }
     }
 }

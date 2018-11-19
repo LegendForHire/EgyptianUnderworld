@@ -39,6 +39,8 @@ public abstract class Enemy : MonoBehaviour
     internal float attackRange;
     internal float attackRate;
     private ILevel level;
+    [SerializeField] private Weapon weapon;
+
 
     internal virtual void Awake()
 	{
@@ -53,10 +55,8 @@ public abstract class Enemy : MonoBehaviour
 	}
 
     internal virtual bool PlayerInRange(){
-        if(chaseTarget != null){
-            if (Math.Abs(Vector3.Distance(this.transform.position, player.transform.position))< attackRange) return true;
-        }
-        return false;
+       Debug.Log(Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)));
+       return Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)) <= attackRange;
     }
 
     // Trigger behavior is off-loaded to the state. Write the method.
@@ -97,6 +97,7 @@ public abstract class Enemy : MonoBehaviour
             chaseTarget = null;
             return false;
         }
+        Debug.Log(hit.collider.CompareTag("Player"));
     }
 	internal virtual void Patrol ()
 	{
@@ -115,7 +116,7 @@ public abstract class Enemy : MonoBehaviour
     }
     internal virtual void Chase()
     {
-        navMeshAgent.destination = chaseTarget.position;
+        navMeshAgent.destination = player.gameObject.transform.position;
         navMeshAgent.isStopped = false;
     }
     internal virtual bool SearchOver()
@@ -123,7 +124,9 @@ public abstract class Enemy : MonoBehaviour
         return searchTimer > searchingDuration;
     }
 
-    internal abstract void Attack();
+    internal virtual void Attack() {
+        weapon.enemyAttack();
+    }
     internal abstract void Search();
     internal abstract bool Alerted();
     public void Hit()

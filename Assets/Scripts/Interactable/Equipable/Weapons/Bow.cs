@@ -7,7 +7,7 @@ public class Bow : Weapon
     [SerializeField] private Arrow arrowPrefab;
 
     public override void enemyAttack() {
-
+        Fire(20f);
     }
 
     public override void playerUse(Player player) {

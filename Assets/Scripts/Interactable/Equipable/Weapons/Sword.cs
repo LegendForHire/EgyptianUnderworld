@@ -16,7 +16,9 @@ public class Sword : Weapon {
     }
     public override void enemyAttack()
     {
-      
+        gameObject.AddComponent<Rigidbody>();
+        ss = gameObject.AddComponent(typeof(SwordSwing)) as SwordSwing;
+        StartCoroutine(DestroyAfterTime(.33f, ss));
     }
     public override void playerUse(Player player)
     {
@@ -31,7 +33,6 @@ public class Sword : Weapon {
     {
         yield return new WaitForSeconds(t);
         if (Input.GetMouseButtonDown(0)) {
-
             ss = gameObject.AddComponent(typeof(SwordSwing2)) as SwordSwing2;
             StartCoroutine(DestroyAfterTime(.33f, ss));
         }
