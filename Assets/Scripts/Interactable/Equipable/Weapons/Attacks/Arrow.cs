@@ -25,6 +25,11 @@ public class Arrow : Attack {
 	public override void OnCollisionEnter(Collision collision) {
         inMotion = false;
         Destroy(this.GetComponent<Rigidbody>());
+        foreach (BoxCollider bc in this.GetComponentsInChildren<BoxCollider>())
+        {
+            Destroy(bc);
+        }
+        
         if (collision.gameObject.name.Contains("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();

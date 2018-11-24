@@ -9,7 +9,6 @@ public class MeleeEnemy : Enemy {
     private float searchRadius = 2f;
     private float alertDistance = 5f;
     private float attackDamage = .4f;
-    private static float nextHit = 0;
 
 
     internal override void Awake() {

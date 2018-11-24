@@ -40,6 +40,7 @@ public abstract class Enemy : MonoBehaviour
     internal float attackRate;
     private ILevel level;
     [SerializeField] private Weapon weapon;
+    public static float nextHit = 0;
 
 
     internal virtual void Awake()
