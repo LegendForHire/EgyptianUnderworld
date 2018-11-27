@@ -18,8 +18,8 @@ public class SceneChanger : MonoBehaviour {
 
     // Load scene according to this SceneChanger's tag
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.name == "SceneLoader") {
 
+		if (other.gameObject.name == "SceneLoader") {
             // Level was completed
             if (other.gameObject.tag == "LevelEnd") {
                 if (level.ObjectivesComplete()) {

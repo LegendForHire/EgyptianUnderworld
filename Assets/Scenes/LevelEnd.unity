@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731196, g: 0.38074002, b: 0.35872713, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -676,6 +676,7 @@ MonoBehaviour:
   daughter: {fileID: 426992666}
   wife: {fileID: 2014176172}
   son: {fileID: 1306369907}
+  levelContinue: {fileID: 1701637063}
 --- !u!1 &1215248140
 GameObject:
   m_ObjectHideFlags: 0

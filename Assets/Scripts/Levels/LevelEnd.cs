@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelEnd : MonoBehaviour {
     [SerializeField] private GameObject resultsPanel;
@@ -14,6 +15,7 @@ public class LevelEnd : MonoBehaviour {
     [SerializeField] private Image daughter;
     [SerializeField] private Image wife;
     [SerializeField] private Image son;
+    [SerializeField] private Button levelContinue;
 
     private bool success;
 
@@ -32,8 +34,9 @@ public class LevelEnd : MonoBehaviour {
         // Get results from player prefs
         resultsText.text = PlayerPrefs.GetString("resultsText");
 
-        // Add button listener
+        // Add button listeners
         resultsContinue.onClick.AddListener(ShowFamilyPanel);
+        levelContinue.onClick.AddListener(OpenNextScene);
 	}
 	
 	// Update is called once per frame
@@ -83,5 +86,10 @@ public class LevelEnd : MonoBehaviour {
         son.transform.Find("Killed").gameObject.SetActive(sonKilled);
 
         familyPanel.SetActive(true);
+    }
+
+    // Open the next scene
+    private void OpenNextScene() {
+        SceneManager.LoadScene(PlayerPrefs.GetString("nextScene"), LoadSceneMode.Single);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class PlayerHealth : MonoBehaviour {
 	//how much health to regen
 	private const float regenAmount = .0025f;
 	//how often to regen the health
-	private const float regenSpeed = .125f;
+	private const float regenSpeed = .075f;
 	// Use this for initialization
 	void Awake() {
 		Instance = this;
@@ -18,7 +19,7 @@ public class PlayerHealth : MonoBehaviour {
 	
 
 	void Start () {
-		//Call regen function repeatedly.
+		// Call regen function repeatedly.
 		InvokeRepeating("RegenHealth", 0, regenSpeed);
 	}
 
@@ -39,6 +40,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
+		// Determine if the player has died
+        if (playerHealth.fillAmount <= 0) {
+            SceneManager.LoadScene("DeathScreen", LoadSceneMode.Single);
+        }
 	}
 }

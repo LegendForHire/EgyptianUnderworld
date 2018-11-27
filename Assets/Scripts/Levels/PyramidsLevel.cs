@@ -25,6 +25,9 @@ public class PyramidsLevel : MonoBehaviour, ILevel {
     // Use this for initialization
     void Start () {
         infoDisplay.textList = infoText;
+
+        // Set this scene as current scene
+        PlayerPrefs.SetString("currentScene", "Pyramids");
 	}
 	
 	// Update is called once per frame
@@ -53,8 +56,8 @@ public class PyramidsLevel : MonoBehaviour, ILevel {
         // set result text
         string resultsText = "";
 
-        if (reachedEnd) resultsText += "You did good kid.";
-        else resultsText += "You failed kid.";
+        if (reachedEnd) resultsText += "You did good kid.\n\n";
+        else resultsText += "You failed kid.\n\n";
 
         resultsText += "Let's continue on to the city of Cairo.";
         PlayerPrefs.SetString("resultsText", resultsText);

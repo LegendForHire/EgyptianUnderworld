@@ -78,12 +78,14 @@
     <Compile Include="Assets\Scripts\Interactable\Interactable.cs" />
     <Compile Include="Assets\Scripts\Interactable\NPCs\NPC.cs" />
     <Compile Include="Assets\Scripts\Interactable\NPCs\TutorialGhost.cs" />
+    <Compile Include="Assets\Scripts\Levels\DeathScreen.cs" />
     <Compile Include="Assets\Scripts\Levels\ILevel.cs" />
     <Compile Include="Assets\Scripts\Levels\InfoDisplay.cs" />
     <Compile Include="Assets\Scripts\Levels\Intro.cs" />
     <Compile Include="Assets\Scripts\Levels\LevelEnd.cs" />
     <Compile Include="Assets\Scripts\Levels\PyramidsLevel.cs" />
     <Compile Include="Assets\Scripts\Levels\TutorialLevel.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\Lava.cs" />
     <Compile Include="Assets\Scripts\Player\LaserDebug.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />

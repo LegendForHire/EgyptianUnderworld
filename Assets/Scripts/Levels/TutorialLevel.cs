@@ -35,6 +35,9 @@ public class TutorialLevel : MonoBehaviour, ILevel {
         PlayerPrefs.SetInt("daughterKilled", 0);
         PlayerPrefs.SetInt("wifeKilled", 0);
         PlayerPrefs.SetInt("sonKilled", 0);
+
+        // Set this scene as current scene
+        PlayerPrefs.SetString("currentScene", "TownCenter");
     }
 	
 	// Update is called once per frame
