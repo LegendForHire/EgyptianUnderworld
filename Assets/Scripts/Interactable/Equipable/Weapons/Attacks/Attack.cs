@@ -14,5 +14,7 @@ public abstract class Attack : MonoBehaviour {
 		
 	}
     public abstract void OnCollisionEnter(Collision collision);
+
+    public abstract float GetDamage();
    
 }

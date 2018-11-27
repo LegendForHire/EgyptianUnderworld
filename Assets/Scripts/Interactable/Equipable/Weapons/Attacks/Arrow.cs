@@ -36,9 +36,18 @@ public class Arrow : Attack {
             enemy.Hit();
             Destroy(this.gameObject);
         }
-	}
-
-	private IEnumerator DestroyAfter(int time) {
+        if (collision.gameObject.name.Contains("PlayerBody"))
+        {
+            Player player = collision.transform.parent.gameObject.GetComponent<Player>();
+            player.Hit(this);
+            Destroy(this.gameObject);
+        }
+    }
+    public override float GetDamage()
+    {
+        return speed / 100;
+    }
+    private IEnumerator DestroyAfter(int time) {
 		yield return new WaitForSeconds(time);
 		Destroy(this.gameObject);
 	}

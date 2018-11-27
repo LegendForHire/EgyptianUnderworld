@@ -48,7 +48,11 @@ public class SwordSwing : Attack {
         if (collision.gameObject.name.Contains("PlayerBody"))
         {
             Player player = collision.transform.parent.gameObject.GetComponent<Player>();
-            player.Hit();
+            player.Hit(this);
         }
+    }
+    public override float GetDamage()
+    {
+        return .4f;
     }
 }

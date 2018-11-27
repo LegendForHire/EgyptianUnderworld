@@ -126,7 +126,7 @@ public abstract class Enemy : MonoBehaviour
     }
 
     internal virtual void Attack() {
-        weapon.enemyAttack();
+        weapon.enemyAttack(this);
     }
     internal abstract void Search();
     internal abstract bool Alerted();

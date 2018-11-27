@@ -14,7 +14,7 @@ public class Sword : Weapon {
             Destroy(GetComponent<Rigidbody>());
         }
     }
-    public override void enemyAttack()
+    public override void enemyAttack(Enemy enemy)
     {
         gameObject.AddComponent<Rigidbody>();
         ss = gameObject.AddComponent(typeof(SwordSwing)) as SwordSwing;

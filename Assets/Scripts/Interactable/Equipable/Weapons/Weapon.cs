@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class Weapon : Equipable{
 
-    public abstract void enemyAttack();
+    public abstract void enemyAttack(Enemy enemy);
 }
