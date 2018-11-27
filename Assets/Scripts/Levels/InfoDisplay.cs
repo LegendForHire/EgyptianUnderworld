@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class InfoDisplay : MonoBehaviour {
     public List<string> textList;
 
-    [SerializeField] private Button nextButton;
+    private Button nextButton;
     [SerializeField] private Text info;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
 
@@ -14,6 +14,7 @@ public class InfoDisplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        nextButton = GameObject.Find("NextButton").GetComponent<Button>();
         nextButton.onClick.AddListener(NextClick);
 
         Cursor.lockState = CursorLockMode.None;
