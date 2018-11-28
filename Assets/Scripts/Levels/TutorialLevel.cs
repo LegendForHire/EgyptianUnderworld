@@ -46,6 +46,11 @@ public class TutorialLevel : MonoBehaviour, ILevel {
         UpdateHUD(!infoDisplay.isActiveAndEnabled);
     }
 
+    // Advance the current objective variable
+    public void AdvanceObjective() {
+        currentObjective++;
+    }
+
 	// Return true when the player has completed all objectives
     // Here, the player doesn't NEED to complete any of objectives to continue
     // Not completing the objectives will affect gameplay, however.
@@ -59,7 +64,7 @@ public class TutorialLevel : MonoBehaviour, ILevel {
 
         // if the player has killed all enemies switch the objective
         if (enemiesLeft == 0) {
-            currentObjective = 2;
+            AdvanceObjective();
         }
     }
 
@@ -67,7 +72,7 @@ public class TutorialLevel : MonoBehaviour, ILevel {
     public void GotWeapon() {
         if (currentObjective == 0) {
             hasWeapon = true;
-            currentObjective = 1;
+            AdvanceObjective();
             countdownStarted = true;
             StartCoroutine(Countdown());
         }
@@ -125,6 +130,14 @@ public class TutorialLevel : MonoBehaviour, ILevel {
     }
 
     public void OpenPasswordEntry(string[] passwords) {
+        throw new System.NotImplementedException();
+    }
+
+    public void OpenTextDialog(List<string> text) {
+        throw new System.NotImplementedException();
+    }
+
+    public void ReadBook() {
         throw new System.NotImplementedException();
     }
 

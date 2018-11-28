@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ *   Written by Ryan Kugel
+ */
 public class InfoDisplay : MonoBehaviour {
     public List<string> textList;
 
@@ -10,7 +13,7 @@ public class InfoDisplay : MonoBehaviour {
     [SerializeField] private Text info;
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
 
-    private int currentItem = 0;
+    public int currentItem = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -32,14 +35,29 @@ public class InfoDisplay : MonoBehaviour {
         firstPersonController.canMove = false;
 	}
 
+    // Open this display
+    public void OpenDisplay() {
+        nextButton.GetComponentInChildren<Text>().text = "Next";
+        info.text = textList[currentItem];
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        this.gameObject.SetActive(true);
+    }
+
+    // Close this display
+    private void CloseDisplay() {
+        firstPersonController.canMove = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        this.gameObject.SetActive(false);
+    }
+
+    // Handle next button clicking
     private void NextClick() {
 
         // hide the display if we've reached the last bit of text
         if (IsLastItem()) {
-            firstPersonController.canMove = true;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            this.gameObject.SetActive(false);
+            CloseDisplay();
             return;
         } 
 

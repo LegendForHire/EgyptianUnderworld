@@ -8,7 +8,7 @@ public class SceneChanger : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		level = GameObject.Find("Level").GetComponent<ILevel>();
+		
 	}
 	
 	// Update is called once per frame
@@ -18,6 +18,7 @@ public class SceneChanger : MonoBehaviour {
 
     // Load scene according to this SceneChanger's tag
 	void OnTriggerEnter(Collider other) {
+		level = GameObject.Find("Level").GetComponent<ILevel>();
 
 		if (other.gameObject.name == "SceneLoader") {
             // Level was completed
@@ -26,6 +27,8 @@ public class SceneChanger : MonoBehaviour {
                     level.SetLevelResults();
                     SceneManager.LoadScene(other.gameObject.tag, LoadSceneMode.Single);
                     return;
+                } else {
+                	return;
                 }
             }
 

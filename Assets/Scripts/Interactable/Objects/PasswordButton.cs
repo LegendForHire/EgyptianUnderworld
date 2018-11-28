@@ -13,7 +13,6 @@ public class PasswordButton : Interactable {
 	}
 
     public override void Interact(Player player) {
-
         // Tell level to open password entry UI
         level.OpenPasswordEntry(passwords);
 
