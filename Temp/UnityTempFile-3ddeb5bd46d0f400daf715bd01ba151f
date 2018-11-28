@@ -2,9 +2,8 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:'Temp/Assembly-CSharp-Editor.dll'
+-out:'Temp/UnityEditor.StandardEvents.dll'
 -nostdlib
--r:'Library/ScriptAssemblies/Assembly-CSharp.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll'
@@ -68,10 +67,6 @@
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/Unity.Locator.dll'
--r:'Library/ScriptAssemblies/UnityEditor.StandardEvents.dll'
--r:'Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll'
--r:'Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll'
--r:'Library/ScriptAssemblies/Unity.TextMeshPro.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll'
@@ -116,7 +111,7 @@
 -define:UNITY_2017_4_OR_NEWER
 -define:UNITY_2018_1_OR_NEWER
 -define:UNITY_2018_2_OR_NEWER
--define:UNITY_2018_2_12
+-define:UNITY_2018_2_13
 -define:UNITY_2018_2
 -define:UNITY_2018
 -define:PLATFORM_ARCH_64
@@ -205,10 +200,5 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 -define:CROSS_PLATFORM_INPUT
-'Assets/ThirdParty/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/GerstnerDisplaceEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/PlanarReflectionEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/SpecularLightingEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/WaterBaseEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/WaterEditorUtility.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/Editor/Importer.cs'
 -lib:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api'

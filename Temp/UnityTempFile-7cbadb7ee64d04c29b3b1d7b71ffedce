@@ -2,9 +2,9 @@
 -target:library
 -nowarn:0169
 -langversion:4
--out:'Temp/Assembly-CSharp-Editor.dll'
+-out:'Temp/Unity.TextMeshPro.Editor.dll'
 -nostdlib
--r:'Library/ScriptAssemblies/Assembly-CSharp.dll'
+-r:'Library/ScriptAssemblies/Unity.TextMeshPro.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll'
@@ -68,15 +68,8 @@
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Managed/Unity.Locator.dll'
--r:'Library/ScriptAssemblies/UnityEditor.StandardEvents.dll'
--r:'Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll'
--r:'Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll'
--r:'Library/ScriptAssemblies/Unity.TextMeshPro.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll'
@@ -116,7 +109,7 @@
 -define:UNITY_2017_4_OR_NEWER
 -define:UNITY_2018_1_OR_NEWER
 -define:UNITY_2018_2_OR_NEWER
--define:UNITY_2018_2_12
+-define:UNITY_2018_2_13
 -define:UNITY_2018_2
 -define:UNITY_2018
 -define:PLATFORM_ARCH_64
@@ -205,10 +198,43 @@
 -define:UNITY_TEAM_LICENSE
 -define:ENABLE_VSTU
 -define:CROSS_PLATFORM_INPUT
-'Assets/ThirdParty/Standard Assets/Editor/CrossPlatformInput/CrossPlatformInputInitialize.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/GerstnerDisplaceEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/PlanarReflectionEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/SpecularLightingEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/WaterBaseEditor.cs'
-'Assets/ThirdParty/Standard Assets/Editor/Water/Water4/WaterEditorUtility.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/DropdownOptionListDrawer.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/EditorCoroutine.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/GlyphInfoDrawer.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/KerningPairDrawer.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/SpriteInfoDrawer.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_BaseShaderGUI.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_BitmapShaderGUI.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_ColorGradientAssetMenu.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_ColorGradientEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_DropdownEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_EditorPanel.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_EditorUtility.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_FontAssetEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_InputFieldEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_MeshRendererEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_PackageUtilities.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_PostBuildProcessHandler.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_ProjectTextSettings.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_ResourcesLoader.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SDFShaderGUI.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SettingsEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SpriteAssetEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SpriteAssetImporter.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SpriteAssetMenu.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_StyleAssetMenu.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_StyleSheetEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SubMesh_Editor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_SubMeshUI_Editor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_UiEditorPanel.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMP_UIStyleManager.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_ContextMenus.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_CreateObjectMenu.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_EditorShaderUtilities.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_FontAssetCreatorWindow.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_FontPlugin.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_SDFMaterialEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_SortingLayerHelper.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_TextContainerEditor.cs'
+'/Users/rkugel/Library/Unity/cache/packages/packages.unity.com/com.unity.textmeshpro@1.2.4/Scripts/Editor/TMPro_TexturePostProcessor.cs'
 -lib:'/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/2.0-api'
