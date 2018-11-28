@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 72
+  controlID: 70
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -91,8 +91,8 @@ MonoBehaviour:
     y: 0
     width: 466
     height: 858
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 73
+  controlID: 71
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 74
+  controlID: 72
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -283,10 +283,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1503
+    x: 2110
     y: 94
-    width: 417
-    height: 926
+    width: 450
+    height: 1244
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -308,10 +308,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1582
-    y: 92
-    width: 338
-    height: 926
+    x: 2110
+    y: 94
+    width: 450
+    height: 1244
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 MonoBehaviour:
@@ -375,20 +375,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/ThirdParty/Low Poly Egypt Starter Kit/Prefabs/Nature
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/ThirdParty/Low Poly Egypt Starter Kit/Prefabs/Nature
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/rkugel/Documents/EgyptianUnderworld
+  m_LastProjectPath: /Users/gwibbelsman/Documents/EgyptianUnderworld
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 223c0000
-    m_LastClickedID: 15394
-    m_ExpandedIDs: 00000000a03700001c3a00009c3a0000de3a00002c3b0000643b00007e3b0000e83b0000223c0000803c00009a3c0000ec3c0000ee3c0000123e0000a83e0000263f0000a43f0000b03f0000fe3f0000aa40000002410000184100005041000068410000be410000364200005c4200001e430000d64400003e450000644500006a450000f045000004460000564600008e4c0000904c0000924c0000944c0000964c000000ca9a3b
+    scrollPos: {x: 0, y: 242.50616}
+    m_SelectedIDs: f03c0000
+    m_LastClickedID: 15600
+    m_ExpandedIDs: 0000000058380000d63a0000563b0000e63b00001e3c0000de3c00003c3d0000563d0000a83d0000aa3d0000ce3e0000643f00008c3f0000e23f000060400000ba400000664100000c4200007a420000184300005a44000092450000f84500001e46000024460000be460000104700006e4d0000704d0000724d0000744d0000764d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -416,7 +416,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a03700001c3a00009c3a0000de3a00002c3b0000643b00007e3b0000e83b0000223c0000803c00009a3c0000ec3c0000ee3c0000123e0000a83e0000263f0000a43f0000b03f0000fe3f0000aa40000002410000184100005041000068410000be410000364200005c4200001e430000d64400003e450000644500006a450000f045000004460000564600008e4c0000904c0000924c0000944c0000964c0000
+    m_ExpandedIDs: 0000000058380000d63a0000563b0000983b0000e63b00001e3c0000383c0000a43c0000de3c00003c3d0000563d0000a83d0000aa3d0000ce3e0000643f0000e23f0000604000006c400000ba40000066410000be410000d44100000c420000244200007a420000f242000018430000da43000092450000f84500001e46000024460000aa460000be460000104700006e4d0000704d0000724d0000744d0000764d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -532,9 +532,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4c460000
-    m_LastClickedID: 0
-    m_ExpandedIDs: ea78fcffdc2dfdff3a39fdff6441fdff4652fdff2c56fdff1e72fdff68a7fdffb6e1fdffe263fefff264feff9c69feff42c0feffbac6feffbed9feffa40fffff423effffe463fffffc69ffffd6acfffffac9ffffd6d0fffffadeffff24faffff00000000165d000078640000ae6400005e6800004cc40000242b0100
+    m_SelectedIDs: 42670000
+    m_LastClickedID: 26434
+    m_ExpandedIDs: 76fcedff063ff0ff8a63f0ff7ed7f1ff80d7f1ffd6d7f1ffdcd7f1ffded7f1ffe0d7f1ffe4d7f1ffe6d7f1ffecd7f1ffec31f4ffc03df7ff6859f7ff7608f8ffec56f8ffdcacf8ff80c7f8ff52ddf8ffc209f9ff6081f9ff34c4f9ff94a0faff1607fcfface4fcff4c2efeff8a3ffeffa468ffff4073ffff327dfffffc84ffff24a6ffff4eadffff88baffff78c6ffff6ee4ffff86efffffb8f7ffff0000000062600000666000009a600000aa660000046700005467000082670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -550,7 +550,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
   - Pyramids
@@ -584,14 +584,14 @@ MonoBehaviour:
     height: 837
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 4176.732787013054
+  lastFramingTime: 1322.7083129882812
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -31.536098, y: 51.038567, z: -141.5722}
+    m_Target: {x: -213.53442, y: 6.2995987, z: 112.60861}
     speed: 2
-    m_Value: {x: -31.536098, y: 51.038567, z: -141.5722}
+    m_Value: {x: -213.53442, y: 6.2995987, z: 112.60861}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -619,13 +619,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.014607171, y: -0.85766053, z: 0.51342934, w: 0.024402553}
+    m_Target: {x: -0.2128373, y: -0.18330385, z: 0.04068674, w: -0.9588768}
     speed: 2
-    m_Value: {x: 0.014607171, y: -0.85766053, z: 0.51342934, w: 0.024402553}
+    m_Value: {x: -0.2128373, y: -0.18330385, z: 0.04068674, w: -0.9588768}
   m_Size:
-    m_Target: 44.680317
+    m_Target: 116.46647
     speed: 2
-    m_Value: 44.680317
+    m_Value: 116.46647
   m_Ortho:
     m_Target: 0
     speed: 2
