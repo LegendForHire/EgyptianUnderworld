@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4000014236204432}
   - component: {fileID: 33000012906488606}
   - component: {fileID: 23000013370270704}
+  - component: {fileID: 65812973413917658}
   m_Layer: 0
   m_Name: Flat_Stone_05
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012417905578}
   m_Mesh: {fileID: 4300000, guid: dfda2254be3cc594c99d693b30dec3a5, type: 3}
+--- !u!65 &65812973413917658
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012417905578}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5918276, y: 0.11040256, z: 1.4950391}
+  m_Center: {x: 0.0010157526, y: 0.02376147, z: 0.0027720332}

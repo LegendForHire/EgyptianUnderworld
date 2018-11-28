@@ -54,6 +54,7 @@ public class PasswordEntry : MonoBehaviour {
         string userAnswer = passwordField.text;
 
         for (int i = 0; i < passwords.Length; i++) {
+            Debug.Log(passwords[i]);
             // Correct answer
             if (userAnswer == passwords[i]) {
                 passwordButton.SetActive(false);
