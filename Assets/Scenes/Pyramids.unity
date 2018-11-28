@@ -10170,6 +10170,7 @@ MonoBehaviour:
   crosshairs: {fileID: 1684394706}
   health: {fileID: 153470861}
   healthText: {fileID: 240545927}
+  finalDoor: {fileID: 636148664}
   toCairo: {fileID: 1529799753}
 --- !u!1001 &1415696294
 Prefab:
