@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
     private Equipable equipped;
-    private float equipRange = 4f;
+    private float interactRange = 6f;
     private Interactable interactable;
     [SerializeField] private InputManager inputs;
 
@@ -25,12 +25,23 @@ public class Player : MonoBehaviour {
         OnSeesInteractable();
 	}
 
-    // Create halo glow on equipable object the player sees
+    // Create halo glow on interactable object the player sees
     void OnSeesInteractable() {
         RaycastHit hit;
         Vector3 lookVector = transform.forward;
         Vector3 pos = transform.position;
-        if ((Physics.Raycast(pos, lookVector, out hit, equipRange)
+
+        // interactable, non-equipable objects
+        if (Physics.Raycast(pos, lookVector, out hit, interactRange)) {
+            if (hit.collider.gameObject.tag == "ObjectInteract") {
+                interactable = hit.collider.gameObject.GetComponent<Interactable>();
+                Behaviour halo = (UnityEngine.Behaviour)interactable.GetComponent("Halo");
+                if (halo != null) halo.enabled = true;
+                return;
+            }
+        }
+
+        if ((Physics.Raycast(pos, lookVector, out hit, interactRange)
             && hit.collider.gameObject.GetComponent<Equipable>() != null))
         {
 
@@ -75,7 +86,7 @@ public class Player : MonoBehaviour {
     }
     public void Hit(Attack a)
     {
-        Debug.Log("hitting");
+        //Debug.Log("hitting");
         PlayerHealth.Instance.TakeDamage(a.GetDamage());
     }
 }

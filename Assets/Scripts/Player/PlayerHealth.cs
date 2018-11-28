@@ -30,7 +30,6 @@ public class PlayerHealth : MonoBehaviour {
 			return;
 		}
 		playerHealth.fillAmount += (-damage);
-        Debug.Log(playerHealth.fillAmount);
 	}
 	
 	//update the slider with the amount of regened health

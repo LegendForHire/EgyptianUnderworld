@@ -14,8 +14,8 @@ public class InputManager: MonoBehaviour{
     }
 
     public void RegisterKey(string keyCode, NoInputAction actionFunction){
-        Debug.Log("keyActions is null? ");
-        Debug.Log(""+keyActions == null);
+        //Debug.Log("keyActions is null? ");
+        //Debug.Log(""+keyActions == null);
         keyActions.Add(keyCode, actionFunction);
     }
 
@@ -28,7 +28,7 @@ public class InputManager: MonoBehaviour{
         foreach(KeyValuePair<string, NoInputAction> pair in keyActions){
             if (Input.GetKeyDown(pair.Key))
             {
-                Debug.Log("Received key press: "+pair.Key);
+                //Debug.Log("Received key press: "+pair.Key);
                 pair.Value();
             }
         }

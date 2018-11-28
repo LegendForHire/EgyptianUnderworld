@@ -41,6 +41,7 @@ public abstract class Enemy : MonoBehaviour
     private ILevel level;
     [SerializeField] private Weapon weapon;
     public static float nextHit = 0;
+    private bool hit = false;
 
 
     internal virtual void Awake()
@@ -56,7 +57,7 @@ public abstract class Enemy : MonoBehaviour
 	}
 
     internal virtual bool PlayerInRange(){
-       Debug.Log(Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)));
+       //Debug.Log(Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)));
        return Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)) <= attackRange;
     }
 
@@ -132,6 +133,10 @@ public abstract class Enemy : MonoBehaviour
     internal abstract bool Alerted();
     public void Hit()
     {
+        // don't repeat this function if already hit
+        if (hit) return;
+
+        hit = true;
         Destroy(this.gameObject);
         level.GuardKilled();
     }

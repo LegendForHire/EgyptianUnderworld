@@ -39,7 +39,7 @@ public class SwordSwing : Attack {
     }
     public override void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name.Contains("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();

@@ -6,10 +6,9 @@ using UnityEngine.UI;
 public class MeleeEnemy : Enemy {
 
     private Vector3 searchHere;
-    private float searchRadius = 2f;
-    private float alertDistance = 5f;
+    private float searchRadius = 16f;
+    private float alertDistance = 16f;
     private float attackDamage = .4f;
-
 
     internal override void Awake() {
         base.Awake();
@@ -45,7 +44,7 @@ public class MeleeEnemy : Enemy {
     // Enemy alerted state, search for the player
     class AlertedState : State {
         public AlertedState(MeleeEnemy enemy) : base(enemy) {
-            Debug.Log("Alerted");
+            //Debug.Log("Alerted");
             enemy.searchTimer = 0;
             enemy.searchHere = enemy.player.transform.position;
             enemy.sightRange = 40f;
@@ -64,7 +63,7 @@ public class MeleeEnemy : Enemy {
     // Base state for the MeleeEnemy, just patrol and look for the player
     class PatrollingState : State {
         public PatrollingState(MeleeEnemy enemy) : base(enemy) {
-            Debug.Log("patrol");
+            //Debug.Log("patrol");
             enemy.sightRange = 30;
         }
 
@@ -86,7 +85,7 @@ public class MeleeEnemy : Enemy {
     // Chasing player state, either attack or go alert after chase
     class ChasingState : State {
         public ChasingState(MeleeEnemy enemy) : base(enemy) {
-            Debug.Log("Chase");
+            //Debug.Log("Chase");
             enemy.searchHere = Vector3.negativeInfinity;
             nextHit = 0;
         }

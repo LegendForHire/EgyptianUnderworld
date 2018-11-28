@@ -14,7 +14,7 @@ public class TutorialLevel : MonoBehaviour, ILevel {
 	[SerializeField] private GameObject toPyramids;
 
     private int enemiesLeft = 8;
-    private int timeLeft = 45;
+    private int timeLeft = 90;
     private bool countdownStarted = false;
     private bool hasWeapon = false;
 
@@ -22,7 +22,7 @@ public class TutorialLevel : MonoBehaviour, ILevel {
     private List<string> infoText = new List<string> {
         "Hello my pawn. By now I'm sure you've noticed I'm in your head to stay.\n\nLet me explain how this arrangement is going to work. I need you to do things for me, and you will.\n\nI don't always care how you do them, but they must be done.",
         "This is all very simple. Do what I ask of you, and eventually I'll let your family go.\n\nFail, and I will kill your family... One by one.\n\nHere's your first task.",
-        "In this village you need to steal a weapon from the town center, but the guards will attack you once you do so.\n\nYou MUST kill every guard in the town. We can't have any witnesses...\n\nFinally, escape to the pyramids where we will begin your training.\n\nOh... And you only have 45 seconds to reach the pyramids once you've stolen a weapon."
+        "In this village you need to steal a weapon from the town center, but the guards will attack you once you do so.\n\nYou MUST kill every guard in the town. We can't have any witnesses...\n\nFinally, escape to the pyramids where we will begin your training.\n\nOh... And you only have 90 seconds to reach the pyramids once you've stolen a weapon."
     };
 
     private int currentObjective = 0;
@@ -119,4 +119,13 @@ public class TutorialLevel : MonoBehaviour, ILevel {
         // set next level scene
         PlayerPrefs.SetString("nextScene", "Pyramids");
     }
+
+    public void ButtonPressed(string buttonName) {
+        throw new System.NotImplementedException();
+    }
+
+    public void OpenPasswordEntry(string[] passwords) {
+        throw new System.NotImplementedException();
+    }
+
 }

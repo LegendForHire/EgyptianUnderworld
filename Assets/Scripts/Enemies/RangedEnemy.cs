@@ -8,9 +8,9 @@ public class RangedEnemy : Enemy {
         base.Awake();
         currentState = new PatrollingState(this);
         searchingDuration = 10f;
-        sightRange = 40f;
+        sightRange = 80f;
         attackRange = 80f;
-        attackRate = .8f;
+        attackRate = 1.2f;
 
     }
 

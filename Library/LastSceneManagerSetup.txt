@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Cairo.unity
+- path: Assets/Scenes/Pyramids.unity
   isLoaded: 1
   isActive: 1

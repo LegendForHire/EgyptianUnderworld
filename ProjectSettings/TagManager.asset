@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Weapon
   - LevelEnd
+  - Fire
+  - PlatformA
+  - PlatformB
+  - PlatformC
+  - ObjectInteract
   layers:
   - Default
   - TransparentFX
