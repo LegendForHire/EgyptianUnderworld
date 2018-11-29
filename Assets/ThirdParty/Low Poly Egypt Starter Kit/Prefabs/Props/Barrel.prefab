@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4000010436639472}
   - component: {fileID: 33000013951042808}
   - component: {fileID: 23000013166739780}
+  - component: {fileID: 65825446381628150}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013126232980}
   m_Mesh: {fileID: 4300000, guid: df3f006b2c9012f4bb3d007dd47ffc94, type: 3}
+--- !u!65 &65825446381628150
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013126232980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.671108, y: 2.0000148, z: 1.6711133}
+  m_Center: {x: 0.000006109476, y: 0.9999998, z: -0.000011712313}

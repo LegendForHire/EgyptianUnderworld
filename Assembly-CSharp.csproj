@@ -228,6 +228,7 @@
      <None Include="Assets\ThirdParty\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\ThirdParty\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
      <None Include="Assets\ThirdParty\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\read me.txt" />
      <None Include="Assets\ThirdParty\TGU Skybox Pack\Readme.txt" />
      <None Include="Assets\ThirdParty\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\ThirdParty\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
