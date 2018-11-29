@@ -819,9 +819,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textList: []
-  nextButton: {fileID: 843379024}
   info: {fileID: 1910813118}
   firstPersonController: {fileID: 1875777772}
+  currentItem: 0
 --- !u!114 &213589330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3912,6 +3912,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -5811,8 +5816,8 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443741583}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.79999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 67825543}
@@ -5888,6 +5893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputs: {fileID: 1092031345}
+  playerBody: {fileID: 1661787814}
 --- !u!120 &1443741590
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -6334,6 +6340,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -6514,7 +6525,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609968556}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -6788,6 +6799,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!122 &1661787819
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661787814}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294908672
+  m_Size: 1
 --- !u!4 &1667809421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4935893080051066, guid: f4728458078cc58469db0a74083cbaf1,
@@ -6905,6 +6927,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -7066,6 +7093,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -7593,6 +7625,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -8611,6 +8648,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -8681,6 +8723,16 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 195533462567630908, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: m_AutoBraking
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114085235446295650, guid: 77514dda6e95045d8ad22d4f63bf598b,
+        type: 2}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1661787814}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77514dda6e95045d8ad22d4f63bf598b, type: 2}
   m_IsPrefabAsset: 0
@@ -9086,6 +9138,7 @@ MonoBehaviour:
   - {fileID: 956674361}
   - {fileID: 682816594}
   eyes: {fileID: 25624136}
+  playerBody: {fileID: 1661787814}
   player: {fileID: 1443741588}
   weapon: {fileID: 1303289596}
 --- !u!4 &2132051956 stripped

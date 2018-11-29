@@ -28,6 +28,7 @@ public abstract class Enemy : MonoBehaviour
 	// Lift the look vector so he looks for the head, not the feet when chasing the player.
 	// Otherwise, it is too hard to hide from the enemy.
 	private Vector3 offset = new Vector3 (0,.5f,0);
+    [SerializeField] public GameObject playerBody;
     [SerializeField] public Player player;
     // Store ref to player transform so I know where to chase to.
     private Transform chaseTarget;
@@ -57,8 +58,8 @@ public abstract class Enemy : MonoBehaviour
 	}
 
     internal virtual bool PlayerInRange(){
-       //Debug.Log(Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)));
-       return Math.Abs(Vector3.Distance(this.transform.position, player.transform.position)) <= attackRange;
+       //Debug.Log(Math.Abs(Vector3.Distance(this.transform.position, playerBody.transform.position)));
+       return Math.Abs(Vector3.Distance(this.transform.position, playerBody.transform.position)) <= attackRange;
     }
 
     // Trigger behavior is off-loaded to the state. Write the method.
@@ -118,7 +119,7 @@ public abstract class Enemy : MonoBehaviour
     }
     internal virtual void Chase()
     {
-        navMeshAgent.destination = player.gameObject.transform.position;
+        navMeshAgent.destination = playerBody.gameObject.transform.position;
         navMeshAgent.isStopped = false;
     }
     internal virtual bool SearchOver()

@@ -1,27 +1,30 @@
 ﻿<Properties StartupConfiguration="{631CE849-CCF5-3FAD-6FDB-410DB4F173CE}|">
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interactable/Equipable/Weapons/Attacks/SwordSwing.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemies/Enemy.cs" Line="85" Column="28" />
-      <File FileName="Assets/Scripts/Enemies/MeleeEnemy.cs" Line="25" Column="41" />
-      <File FileName="Assets/Scripts/Enemies/RangedEnemy.cs" Line="59" Column="10" />
-      <File FileName="Assets/Scripts/Equipable/Weapons/Weapon.cs" Line="6" Column="5" />
-      <File FileName="Assets/Scripts/Equipable/Equipable.cs" Line="18" Column="20" />
-      <File FileName="Assets/Scripts/Equipable/Weapons/Sword.cs" Line="12" Column="42" />
-      <File FileName="Assets/Scripts/Player/PlayerHealth.cs" Line="39" Column="20" />
-      <File FileName="Assets/Scripts/Player/Player.cs" Line="51" Column="53" />
-      <File FileName="Assets/Scripts/Equipable/Weapons/Arrow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Enemies/Enemy.cs" Line="28" Column="89" />
+      <File FileName="Assets/Scripts/Enemies/MeleeEnemy.cs" Line="24" Column="35" />
+      <File FileName="Assets/Scripts/Enemies/RangedEnemy.cs" Line="77" Column="10" />
+      <File FileName="Assets/Scripts/Player/PlayerHealth.cs" Line="39" Column="1" />
+      <File FileName="Assets/Scripts/Player/Player.cs" Line="85" Column="9" />
       <File FileName="Assets/Scripts/Enemies/EnemyHealth.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Enemies/State.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Equipable/Weapons/Bow.cs" Line="7" Column="48" />
       <File FileName="Assets/Scripts/InputManager.cs" Line="39" Column="10" />
-      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/Interactable/Interactable.cs" Line="23" Column="19" />
+      <File FileName="Assets/Scripts/Interactable/Equipable/Equipable.cs" Line="15" Column="30" />
+      <File FileName="Assets/Scripts/Interactable/Equipable/Weapons/Attacks/Arrow.cs" Line="40" Column="10" />
+      <File FileName="Assets/Scripts/Interactable/Equipable/Weapons/Attacks/Attack.cs" Line="11" Column="2" />
+      <File FileName="Assets/Scripts/Interactable/Equipable/Weapons/Sword.cs" Line="22" Column="28" />
+      <File FileName="Assets/Scripts/Interactable/Equipable/Weapons/Bow.cs" Line="10" Column="31" />
+      <File FileName="Assets/Scripts/Interactable/Equipable/Weapons/Attacks/SwordSwing.cs" Line="49" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <RunToCursorBreakpoint file="/Users/rhelms/EgyptianUnderworld/Assets/Scripts/Player/Player.cs" relfile="Assets/Scripts/Player/Player.cs" line="165" column="28" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

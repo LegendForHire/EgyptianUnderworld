@@ -249,3 +249,7 @@
 /Users/rhelms/Desktop/EgyptianUnderworld/obj/Debug/Assembly-CSharp.csproj.CopyComplete
 /Users/rhelms/Desktop/EgyptianUnderworld/obj/Debug/Assembly-CSharp.dll
 /Users/rhelms/Desktop/EgyptianUnderworld/obj/Debug/Assembly-CSharp.pdb
+/Users/rhelms/EgyptianUnderworld/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/rhelms/EgyptianUnderworld/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/rhelms/EgyptianUnderworld/obj/Debug/Assembly-CSharp.dll
+/Users/rhelms/EgyptianUnderworld/obj/Debug/Assembly-CSharp.pdb

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Attack : MonoBehaviour {
-
+    public Player player;
 	// Use this for initialization
 	public virtual void Start () {
 		

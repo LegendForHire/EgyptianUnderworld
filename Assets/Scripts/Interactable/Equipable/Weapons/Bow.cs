@@ -5,11 +5,11 @@ using UnityEngine;
 public class Bow : Weapon
 {
     [SerializeField] private Arrow arrowPrefab;
-
+    Player player;
     public override void enemyAttack(Enemy enemy) {
+        player = enemy.player;
         Vector3 lookVector = enemy.transform.forward;
         Quaternion rot = Quaternion.LookRotation(lookVector);
-        Arrow arrow = Instantiate(arrowPrefab);
         Fire(40f, rot);
         //drawBow(rot);
     }
@@ -17,7 +17,6 @@ public class Bow : Weapon
     public override void playerUse(Player player) {
         Vector3 lookVector = player.transform.forward;
         Quaternion rot = Quaternion.LookRotation(lookVector);
-        Arrow arrow = Instantiate(arrowPrefab);
         Fire(40f, rot);
         //drawBow(rot);
 
@@ -37,6 +36,7 @@ public class Bow : Weapon
     void Fire(float speed, Quaternion rot)
     {
         Arrow arrow = Instantiate(arrowPrefab);
+        arrow.player = player;
         arrow.transform.rotation = rot;
         arrow.transform.position = this.transform.parent.transform.TransformPoint(Vector3.forward * 1.5f);
         Vector3 pos = arrow.transform.position;

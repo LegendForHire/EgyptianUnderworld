@@ -25,7 +25,7 @@ public class RangedEnemy : Enemy {
     //  started with code from here https://answers.unity.com/questions/1409312/how-do-i-make-my-enemy-look-at-player-on-only-one.html
     private void lookAtPlayer()
     {
-        Vector3 lookVector = player.transform.position - transform.position;
+        Vector3 lookVector = playerBody.transform.position - transform.position;
         lookVector.y = transform.position.y - .5f;
         Quaternion rot = Quaternion.LookRotation(lookVector);
         transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
@@ -75,6 +75,11 @@ public class RangedEnemy : Enemy {
         }
         public override void Update()
         {
+            if (!enemy.player.HasWeapon())
+            {
+                enemy.Patrol();
+                return;
+            }
             if (enemy.Alerted()) enemy.currentState = new AlertedState(enemy);
             if (enemy.SeesPlayer()) enemy.currentState = new AttackState(enemy);
             enemy.Patrol();

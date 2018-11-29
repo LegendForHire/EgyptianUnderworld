@@ -10,4 +10,9 @@ public abstract class Equipable : Interactable {
         player.Equip(this);
         equipped = true;
     }
+    public override bool isInteractable()
+    {
+        Debug.Log(!equipped);
+        return !equipped;
+    }
 }

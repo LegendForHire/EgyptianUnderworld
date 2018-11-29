@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Sword : Weapon {
     SwordSwing ss;
-    public void Update()
+    Player player;
+    public override void Update()
     {
         if (ss == null && equipped)
         {
@@ -18,7 +19,9 @@ public class Sword : Weapon {
     {
         gameObject.AddComponent<Rigidbody>();
         ss = gameObject.AddComponent(typeof(SwordSwing)) as SwordSwing;
+        ss.player = player;
         StartCoroutine(DestroyAfterTime(.33f, ss));
+
     }
     public override void playerUse(Player player)
     {

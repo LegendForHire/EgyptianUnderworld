@@ -36,8 +36,8 @@ public class MeleeEnemy : Enemy {
     }
 
     internal override bool Alerted() {
-        lastSeenOrHeard = player.transform;
-        return Vector3.Distance(player.transform.position, transform.position) < alertDistance;
+        lastSeenOrHeard = playerBody.transform;
+        return Vector3.Distance(playerBody.transform.position, transform.position) < alertDistance;
     }
 
 
@@ -46,7 +46,7 @@ public class MeleeEnemy : Enemy {
         public AlertedState(MeleeEnemy enemy) : base(enemy) {
             //Debug.Log("Alerted");
             enemy.searchTimer = 0;
-            enemy.searchHere = enemy.player.transform.position;
+            enemy.searchHere = enemy.playerBody.transform.position;
             enemy.sightRange = 40f;
         }
 

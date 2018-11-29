@@ -47,7 +47,6 @@ public class SwordSwing : Attack {
         }
         if (collision.gameObject.name.Contains("PlayerBody"))
         {
-            Player player = collision.transform.parent.gameObject.GetComponent<Player>();
             player.Hit(this);
         }
     }
