@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
 
     public void Use()
     {
-         if (equipped != null && canUse) equipped.playerUse(this);
+        state.Use();
     }
 
     // Pick up a weapon
@@ -166,6 +166,9 @@ public class Player : MonoBehaviour
         {
             if(player.interactable != null)player.interactable.Interact(player);
         }
+        public virtual void Use(){
+            if (player.equipped != null && player.canUse) player.equipped.playerUse(player);
+        }
     }
     public class NormalState : PlayerState
     {
@@ -213,6 +216,8 @@ public class Player : MonoBehaviour
                 player.playerBody.transform.parent = player.transform;
             }
         }
+        public override void Use(){}
+
     }
 }
 

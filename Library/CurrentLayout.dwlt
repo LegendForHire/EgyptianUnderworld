@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 507, y: 471}
   m_MaxSize: {x: 14002, y: 14021}
   vertical: 0
-  controlID: 9
+  controlID: 14
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 471}
   m_MaxSize: {x: 10002, y: 14021}
   vertical: 1
-  controlID: 23
+  controlID: 15
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,8 +177,8 @@ MonoBehaviour:
     y: 904
     width: 2157
     height: 360
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -264,9 +264,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 600a0000
+    m_SelectedIDs: 42420000
     m_LastClickedID: 0
-    m_ExpandedIDs: ca45f9ffac82f9ffc885f9ff9e89f9ffd0b0f9ff481dfaff5c1efaff2a86faff3e87faffae8afaff2c08fbff761cfbff981efbff1a25fbff3ac1ffff04c2ffff86d2ffffbaf7ffff0000000058a20000eea500004aa900006cb90000
+    m_ExpandedIDs: 00e9ffffbaf7ffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -285,7 +285,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
   m_ExpandedScenes:
-  - Pyramids
+  - TownCenter
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -327,20 +327,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Levels
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Levels
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/rkugel/Documents/EgyptianUnderworld
+  m_LastProjectPath: /Users/rhelms/EgyptianUnderworld
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ac3a0000
-    m_LastClickedID: 15020
-    m_ExpandedIDs: 00000000a2380000343b0000b63b0000fc3b00004c3c0000843c0000443d00006a3d0000a43d0000143e0000163e0000d83f00000440000058400000d6400000e440000034410000e44100003c420000544200008c420000f842000098430000624400001a46000080460000ac460000b2460000a44700009465000096650000986500009a6500009c65000000ca9a3b
+    m_SelectedIDs: 463d0000
+    m_LastClickedID: 15686
+    m_ExpandedIDs: 00000000a4380000363b0000b83b0000fe3b00004e3c0000863c0000463d00006c3d0000a63d0000163e0000183e0000dc3f0000084000005c400000da400000e840000038410000e8410000404200005842000090420000fc4200009c430000664400001e46000084460000b0460000b6460000aa470000804f0000824f0000844f0000864f0000884f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -368,7 +368,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a2380000343b0000b63b0000fc3b00004c3c0000843c0000443d00006a3d0000a43d0000143e0000163e0000d83f00000440000058400000d6400000e440000034410000e44100003c420000544200008c420000f842000098430000624400001a46000080460000ac460000b2460000a44700009465000096650000986500009a6500009c650000
+    m_ExpandedIDs: 00000000a4380000363b0000b83b0000fe3b00004e3c0000863c0000463d00006c3d0000a63d0000163e0000183e0000dc3f0000084000005c400000da400000e840000038410000e8410000404200005842000090420000fc4200009c430000664400001e46000084460000b0460000b6460000aa470000804f0000824f0000844f0000864f0000884f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -393,8 +393,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 600a0000
-    m_LastClickedInstanceID: 2656
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000bc1fffff4c36e1ff0000000058490000
     m_RenameOverlay:
