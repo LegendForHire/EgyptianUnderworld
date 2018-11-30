@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CairoLevel : MonoBehaviour, ILevel {
+    [SerializeField] private Player player;
     [SerializeField] private InfoDisplay infoDisplay;
     [SerializeField] private Text objective;
     [SerializeField] private Image crosshairs;
@@ -43,6 +44,7 @@ public class CairoLevel : MonoBehaviour, ILevel {
     // Update elements of the HUD
     private void UpdateHUD(bool showHUD) {
         objective.text = objectives[currentObjective];
+        player.canUse = showHUD;
 
         // Show or hide HUD elements
         objective.gameObject.SetActive(showHUD);

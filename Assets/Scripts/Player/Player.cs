@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public bool canUse = true;
     protected Equipable equipped;
     protected float interactRange = 6f;
     protected Interactable interactable;
@@ -16,17 +17,37 @@ public class Player : MonoBehaviour
     private ILevel level;
     Vector3 bodyLocation;
 
+    [SerializeField] private Equipable bow;
+    [SerializeField] private Equipable sword;
 
     // Use this for initialization
     void Start()
     {
         state = new NormalState(this);
         interactable = null;
-        equipped = null;
         inputs.RegisterKey("f", Interact);
         inputs.RegisterKey("q", OutOfBody);
         inputs.RegisterMouseButton(Use);
         level = GameObject.Find("Level").GetComponent<ILevel>();
+
+        // Get player's weapon from player prefs
+        if (PlayerPrefs.HasKey("playerWeapon") && bow != null && sword != null) {
+            Equipable[] weapons = { bow, sword };
+
+            string weapon = PlayerPrefs.GetString("playerWeapon");
+            for (int i = 0; i < weapons.Length; i++) {
+                if (weapons[i].gameObject.name == weapon) {
+                    Equip(weapons[i]);
+                    weapons[i].equipped = true;
+                    weapons[i].player = this;
+                    break;
+                }
+            }
+        } else {
+            equipped = null;
+        }
+
+        
     }
 
     // Update is called once per frame
@@ -53,16 +74,24 @@ public class Player : MonoBehaviour
             equipped.transform.parent = transform.parent.transform.parent;
             equipped.equipped = false;
         }
+
         equipment.transform.parent = transform;
         equipped = equipment;
         equipped.gameObject.transform.localPosition = new Vector3(.8f, -.2f, 1);
         equipped.transform.localEulerAngles = new Vector3(-90, 120, 0);
-        level.GotWeapon();
+
+        // Notify the level a weapon was equipped
+        if (level != null) {
+            level.GotWeapon();
+        }
+
+        // Store weapon name in player prefs for persistence
+        PlayerPrefs.SetString("playerWeapon", equipment.gameObject.name);
     }
 
     public void Use()
     {
-        if (equipped != null) equipped.playerUse(this);
+        if (equipped != null && canUse) equipped.playerUse(this);
     }
 
     // Returns true if the player has a weapon equipped

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bow : Weapon
 {
     [SerializeField] private Arrow arrowPrefab;
-    Player player;
+
     public override void enemyAttack(Enemy enemy) {
         player = enemy.player;
         Vector3 lookVector = enemy.transform.forward;
@@ -19,7 +19,6 @@ public class Bow : Weapon
         Quaternion rot = Quaternion.LookRotation(lookVector);
         Fire(40f, rot);
         //drawBow(rot);
-
     }
 
     IEnumerator drawBow(Quaternion rot)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Equipable : Interactable {
+    public Player player;
     public bool equipped = false;
     public abstract void playerUse(Player player);
     public override void Interact(Player player)
@@ -12,7 +13,7 @@ public abstract class Equipable : Interactable {
     }
     public override bool isInteractable()
     {
-        Debug.Log(!equipped);
+        //Debug.Log(!equipped);
         return !equipped;
     }
 }

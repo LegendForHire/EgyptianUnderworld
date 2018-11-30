@@ -7,6 +7,7 @@ using UnityEngine.UI;
  *   Written by Ryan Kugel
  */
 public class PyramidsLevel : MonoBehaviour, ILevel {
+    [SerializeField] private Player player;
     [SerializeField] private InfoDisplay infoDisplay;
     [SerializeField] private PasswordEntry passwordEntry;
     [SerializeField] private Text objective;
@@ -53,7 +54,7 @@ public class PyramidsLevel : MonoBehaviour, ILevel {
 
         // Set this scene as current scene
         PlayerPrefs.SetString("currentScene", "Pyramids");
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -92,6 +93,7 @@ public class PyramidsLevel : MonoBehaviour, ILevel {
     // Update elements of the HUD
     private void UpdateHUD(bool showHUD) {
         objective.text = objectives[currentObjective];
+        player.canUse = showHUD;
 
         // Show or hide HUD elements
         objective.gameObject.SetActive(showHUD);
@@ -129,7 +131,7 @@ public class PyramidsLevel : MonoBehaviour, ILevel {
     }
 
     public void GotWeapon() {
-        throw new System.NotImplementedException();
+
     }
 
     public void GuardKilled() {

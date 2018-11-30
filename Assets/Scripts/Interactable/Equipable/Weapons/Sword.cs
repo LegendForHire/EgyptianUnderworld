@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sword : Weapon {
     SwordSwing ss;
-    Player player;
+
     public override void Update()
     {
         if (ss == null && equipped)

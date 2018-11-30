@@ -38,6 +38,9 @@ public class TutorialLevel : MonoBehaviour, ILevel {
 
         // Set this scene as current scene
         PlayerPrefs.SetString("currentScene", "TownCenter");
+
+        // Set player's weapon to none
+        PlayerPrefs.DeleteKey("playerWeapon");
     }
 	
 	// Update is called once per frame

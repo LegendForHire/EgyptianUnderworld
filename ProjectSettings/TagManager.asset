@@ -11,6 +11,9 @@ TagManager:
   - PlatformB
   - PlatformC
   - ObjectInteract
+  - FamilyEnd
+  - PharaohEnd
+  - VizierEnd
   layers:
   - Default
   - TransparentFX
