@@ -12363,7 +12363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!65 &326672926
@@ -14144,7 +14144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &378343915
@@ -15569,7 +15569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &413762207
@@ -27347,7 +27347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &691927982
@@ -27457,7 +27457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &692818905
@@ -30898,7 +30898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &817088850
@@ -38110,7 +38110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &996148864
@@ -43728,7 +43728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1139053786
@@ -46112,7 +46112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1196980969
@@ -50461,7 +50461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1310043740
@@ -53552,7 +53552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1411758439
@@ -58336,7 +58336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1521440239
@@ -70100,7 +70100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1797661764
@@ -70210,7 +70210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1798751213
@@ -73158,7 +73158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 0
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1882512868
