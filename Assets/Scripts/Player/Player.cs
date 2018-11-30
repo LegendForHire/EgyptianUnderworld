@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public bool canUse = true;
-    protected Equipable equipped;
+    public Equipable equipped;
     protected float interactRange = 6f;
     protected Interactable interactable;
     [SerializeField] private InputManager inputs;
@@ -66,6 +66,11 @@ public class Player : MonoBehaviour
         state.Interact();
     }
 
+    public void Use()
+    {
+         if (equipped != null && canUse) equipped.playerUse(this);
+    }
+
     // Pick up a weapon
     public void Equip(Equipable equipment)
     {
@@ -87,11 +92,6 @@ public class Player : MonoBehaviour
 
         // Store weapon name in player prefs for persistence
         PlayerPrefs.SetString("playerWeapon", equipment.gameObject.name);
-    }
-
-    public void Use()
-    {
-        if (equipped != null && canUse) equipped.playerUse(this);
     }
 
     // Returns true if the player has a weapon equipped
@@ -121,6 +121,7 @@ public class Player : MonoBehaviour
             player = p;
 
         }
+
         public virtual void OnSeesInteractable()
         {
             RaycastHit hit;

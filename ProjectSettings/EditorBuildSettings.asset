@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FamilyEnd.unity
     guid: a23aa1d5ec3021d4090a76337d943f3f
+  - enabled: 1
+    path: Assets/Scenes/VizierEnd.unity
+    guid: 5fe9666fc78a849ba8bd8885128d90a2
+  - enabled: 1
+    path: Assets/Scenes/PharaohEnd.unity
+    guid: 5c4c9397cc1fe4d3cb6863500fc32860
   m_configObjects: {}

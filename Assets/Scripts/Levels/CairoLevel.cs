@@ -29,7 +29,7 @@ public class CairoLevel : MonoBehaviour, ILevel {
         infoDisplay.textList = infoText;
 
         // Set this scene as the current scene
-        PlayerPrefs.SetString("currentScene", "Pyramids");
+        PlayerPrefs.SetString("currentScene", "Cairo");
     }
 
     // Update is called once per frame
@@ -82,6 +82,7 @@ public class CairoLevel : MonoBehaviour, ILevel {
         infoDisplay.textList = text;
         infoDisplay.currentItem = 0;
         infoDisplay.OpenDisplay();
+        AdvanceObjective();
     }
 
     public void ReadBook() {
