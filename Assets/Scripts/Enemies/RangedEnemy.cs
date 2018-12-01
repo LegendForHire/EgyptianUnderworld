@@ -26,9 +26,10 @@ public class RangedEnemy : Enemy {
     private void lookAtPlayer()
     {
         Vector3 lookVector = playerBody.transform.position - transform.position;
-        lookVector.y = transform.position.y - .5f;
+        lookVector.y = 0;
         Quaternion rot = Quaternion.LookRotation(lookVector);
         transform.rotation = Quaternion.Slerp(transform.rotation, rot, 1);
+        
     }
     class AlertedState : State
     {
