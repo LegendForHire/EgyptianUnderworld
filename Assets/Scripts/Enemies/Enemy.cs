@@ -23,7 +23,7 @@ public abstract class Enemy : MonoBehaviour
     public Transform[] originalwayPoints;
     public Transform[] wayPoints;
     // And where we are on the path
-    private int nextWayPoint;
+    private int nextWayPoint = 0;
     // Empty Game object created at eye level
     public Transform eyes;
 	// Lift the look vector so he looks for the head, not the feet when chasing the player.

@@ -5,7 +5,10 @@ using UnityEngine;
 public class Bow : Weapon
 {
     [SerializeField] private Arrow arrowPrefab;
-    int ammo = 2;
+    int ammo = 100;
+    private bool canFire = true;
+    private float cooldownTime = 1f;
+    
     public override void enemyAttack(Enemy enemy) {
         player = enemy.player;
         Vector3 lookVector = -transform.right;
@@ -14,7 +17,7 @@ public class Bow : Weapon
         lookVector.z = lookVector.z + .05f * range * (enemy.player.playerVelocity.z);
         lookVector.x = lookVector.x + .05f * range * (enemy.player.playerVelocity.x);
         Quaternion rot = Quaternion.LookRotation(lookVector);
-        Fire(40f, rot);
+        if(canFire)Fire(40f, rot);
         //drawBow(rot);
     }
 
@@ -22,8 +25,12 @@ public class Bow : Weapon
         Vector3 lookVector = player.transform.forward;
         Quaternion rot = Quaternion.LookRotation(lookVector);
         
-        if(ammo >0)Fire(40f, rot);
-        ammo--;
+        if(ammo >0 && canFire)
+        {
+            Fire(40f, rot);
+            ammo--;
+        }
+        Debug.Log(ammo);
         //drawBow(rot);
     }
 
@@ -48,5 +55,14 @@ public class Bow : Weapon
         arrow.transform.position = new Vector3(pos.x, pos.y - .1f, pos.z);
         arrow.inMotion = true;
         arrow.speed = speed;
+        canFire = false;
+    }
+
+    private void Update(){
+        cooldownTime -= Time.deltaTime;
+        if(cooldownTime<=0){
+            cooldownTime = 1;
+            canFire = true;
+        }
     }
 }
