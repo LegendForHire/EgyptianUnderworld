@@ -20,9 +20,10 @@ public abstract class Enemy : MonoBehaviour
 	// This deals with all the navigation between way points.
 	internal UnityEngine.AI.NavMeshAgent navMeshAgent;
 	// The points the enemy travels between
+    public Transform[] originalwayPoints;
     public Transform[] wayPoints;
-	// And where we are on the path
-	private int nextWayPoint;
+    // And where we are on the path
+    private int nextWayPoint;
     // Empty Game object created at eye level
     public Transform eyes;
 	// Lift the look vector so he looks for the head, not the feet when chasing the player.
@@ -49,7 +50,7 @@ public abstract class Enemy : MonoBehaviour
 	{
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
         level = GameObject.Find("Level").GetComponent<ILevel>();
-
+        originalwayPoints = wayPoints;
     }
 
 	public virtual void Update () 
@@ -81,17 +82,17 @@ public abstract class Enemy : MonoBehaviour
     internal virtual bool SeesPlayer()
     {
         RaycastHit hit;
-        Vector3 lookVector = eyes.transform.forward;
+        Vector3 lookVector = playerBody.transform.position - eyes.transform.position;
         if (chaseTarget != null)
         {
             lookVector = (chaseTarget.position + offset) - eyes.transform.position;
         }
         if (Physics.Raycast(eyes.transform.position, lookVector, out hit, sightRange)
-            && hit.collider.CompareTag("Player"))
+            && hit.collider.gameObject.name == "PlayerBody")
         {
             // no need to search
             searchTimer = 0f;
-            chaseTarget = hit.transform;
+            chaseTarget = playerBody.transform;
             lastSeenOrHeard = chaseTarget;
             return true;
         }
@@ -100,7 +101,6 @@ public abstract class Enemy : MonoBehaviour
             chaseTarget = null;
             return false;
         }
-        Debug.Log(hit.collider.CompareTag("Player"));
     }
 	internal virtual void Patrol ()
 	{
@@ -136,7 +136,8 @@ public abstract class Enemy : MonoBehaviour
     {
         // don't repeat this function if already hit
         if (hit) return;
-
+        weapon.transform.parent = transform.parent.transform.parent;
+        weapon.equipped = false;
         hit = true;
         Destroy(this.gameObject);
         level.GuardKilled();

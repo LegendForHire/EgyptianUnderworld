@@ -29,14 +29,13 @@ public class Arrow : Attack {
         {
             Destroy(bc);
         }
-        
         if (collision.gameObject.name.Contains("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             enemy.Hit();
             Destroy(this.gameObject);
         }
-        if (collision.gameObject.name.Contains("PlayerBody"))
+        if (collision.gameObject.name.Contains("Player"))
         {
             player.Hit(this);
             Destroy(this.gameObject);

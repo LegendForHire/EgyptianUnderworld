@@ -768,6 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 0
 --- !u!1 &213589327
 GameObject:
@@ -1282,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &314710175
 BoxCollider:
@@ -2741,6 +2743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &756566726
 BoxCollider:
@@ -3830,6 +3833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &1027745828
 BoxCollider:
@@ -4288,6 +4292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &1160185610
 BoxCollider:
@@ -4859,7 +4864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598384e1427849c4a778505f966f72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equipped: 0
+  player: {fileID: 1443741588}
+  equipped: 1
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &1303289597
@@ -5206,6 +5212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &1350201179
 BoxCollider:
@@ -5504,6 +5511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &1392417590
 BoxCollider:
@@ -5892,8 +5900,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d29918fd1e14ef7b177258bda7e181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  equipped: {fileID: 0}
+  playerVelocity: {x: 0, y: 0, z: 0}
   inputs: {fileID: 1092031345}
   playerBody: {fileID: 1661787814}
+  bow: {fileID: 0}
+  sword: {fileID: 0}
 --- !u!120 &1443741590
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -6678,6 +6691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9598384e1427849c4a778505f966f72e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 0
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
@@ -8964,6 +8978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08ef5b57e48b14f478db419634979652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   equipped: 1
 --- !u!65 &2127667824
 BoxCollider:

@@ -14219,6 +14219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1014385437}
   - {fileID: 1832572944}
@@ -29823,6 +29824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 756298459}
   - {fileID: 1381917603}
@@ -30898,7 +30900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  equipped: 1
+  equipped: 0
   arrowPrefab: {fileID: 114983295895698748, guid: c393497151b814da8b4a204ed33a4add,
     type: 2}
 --- !u!122 &817088850
@@ -31811,6 +31813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canUse: 1
   equipped: {fileID: 0}
+  playerVelocity: {x: 0, y: 0, z: 0}
   inputs: {fileID: 1435391248}
   playerBody: {fileID: 1230354512}
   bow: {fileID: 1099150446}
@@ -34713,6 +34716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1800693525}
   - {fileID: 1409689106}
@@ -35186,6 +35190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 686135043}
   - {fileID: 1960753096}
@@ -38185,6 +38190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 167396656}
   - {fileID: 1400586101}
@@ -41150,6 +41156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 414384196}
   - {fileID: 1904173163}
@@ -49353,6 +49360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1671297985}
   - {fileID: 845658645}
@@ -53965,6 +53973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 2087061102}
   - {fileID: 1375070725}
@@ -59795,6 +59804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1868425356}
   - {fileID: 503954611}
@@ -60756,6 +60766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1943814783}
   - {fileID: 1491650603}
@@ -60991,6 +61002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1751460460}
   - {fileID: 117525149}
@@ -63134,6 +63146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1245982647}
   - {fileID: 884474608}
@@ -71849,6 +71862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 681405915}
   - {fileID: 1804449669}
@@ -78649,6 +78663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 933567497}
   - {fileID: 279909993}
@@ -81657,6 +81672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432e58b21a2684c6cb00854cb19ff174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalwayPoints: []
   wayPoints:
   - {fileID: 1262965382}
   - {fileID: 1271505989}

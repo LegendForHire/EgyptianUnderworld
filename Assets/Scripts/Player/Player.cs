@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Equipable equipped;
     protected float interactRange = 6f;
     protected Interactable interactable;
+    public Vector3 playerVelocity = Vector3.zero;
+    private Vector3 lastPosition = Vector3.zero;
     [SerializeField] private InputManager inputs;
     //[SerializeField] private GameObject player;
     [SerializeField] private GameObject playerBody;
@@ -55,7 +57,12 @@ public class Player : MonoBehaviour
     {
         OnSeesInteractable();
     }
+    void FixedUpdate()
+    {
+        playerVelocity = transform.position - lastPosition;
+        lastPosition = transform.position;
 
+    }
     // Create halo glow on interactable object the player sees
     void OnSeesInteractable()
     {
@@ -181,7 +188,7 @@ public class Player : MonoBehaviour
     {
         public OutOfBodyState(Player p) : base(p)
         {
-            ReturnToBodyIn(10);
+            p.StartCoroutine(ReturnToBodyIn(10));
         }
 
         private IEnumerator ReturnToBodyIn(int v)

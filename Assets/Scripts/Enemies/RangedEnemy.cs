@@ -35,15 +35,17 @@ public class RangedEnemy : Enemy {
     {
         public AlertedState(Enemy enemy) : base(enemy)
         {
-            nextHit = 0;
             enemy.sightRange = 80f;
+            enemy.wayPoints = new Transform[2];
+            enemy.wayPoints[0] = enemy.playerBody.transform;
+            enemy.wayPoints[1] = enemy.playerBody.transform;
         }
 
         public override void Update()
         {
-            if (enemy.PlayerInRange()) enemy.currentState = new AttackState(enemy);
+            enemy.Patrol();
+            if (enemy.SeesPlayer()) enemy.currentState = new AttackState(enemy);
             if (enemy.SearchOver()) enemy.currentState = new PatrollingState(enemy);
-            enemy.Search();
         }
 
     }
@@ -57,13 +59,15 @@ public class RangedEnemy : Enemy {
 
         public override void Update()
         {
+            
             renemy.lookAtPlayer();
-            if (Time.time > nextHit && enemy.PlayerInRange())
+            if (Time.time > nextHit)
             {
                 nextHit = Time.time + enemy.attackRate;
                 enemy.Attack();
             }
-            if (!enemy.PlayerInRange()) enemy.currentState = new AlertedState(enemy);
+            
+            if (!enemy.PlayerInRange() || !enemy.SeesPlayer()) enemy.currentState = new AlertedState(enemy);
         }
 
     }
@@ -71,13 +75,15 @@ public class RangedEnemy : Enemy {
     {
         public PatrollingState(Enemy enemy) : base(enemy)
         {
-
+            enemy.wayPoints = enemy.originalwayPoints;
             enemy.sightRange = 40f;
         }
         public override void Update()
         {
+           
             if (!enemy.player.HasWeapon())
             {
+                
                 enemy.Patrol();
                 return;
             }
