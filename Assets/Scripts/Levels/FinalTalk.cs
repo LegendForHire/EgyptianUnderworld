@@ -21,7 +21,8 @@ public class FinalTalk : MonoBehaviour {
 
 	// Open final text dialog
 	private void OnTriggerEnter(Collider other) {
-		if (opened) return;
+        if (other.name == "Arrow") return;
+        if (opened) return;
 		level.OpenTextDialog(text);
 		opened = true;
 	}
