@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class TutorialLevel : MonoBehaviour, ILevel {
     [SerializeField] private InfoDisplay infoDisplay;
 	[SerializeField] private Text objective;
-    [SerializeField] private Image crosshairs;
     [SerializeField] private Text countdown;
-    [SerializeField] private Image health;
-    [SerializeField] private Text healthText;
+    [SerializeField] private GameObject[] guiItems;
 
 	[SerializeField] private GameObject toPyramids;
 
@@ -86,12 +84,9 @@ public class TutorialLevel : MonoBehaviour, ILevel {
         objective.text = objectives[currentObjective];
         countdown.text = "Time Left: " + timeLeft;
 
-        // Show or hide HUD elements
-        objective.gameObject.SetActive(showHUD);
-        crosshairs.gameObject.SetActive(showHUD);
-        countdown.gameObject.SetActive(countdownStarted);
-        health.gameObject.SetActive(showHUD);
-        healthText.gameObject.SetActive(showHUD);
+        for (int i = 0; i < guiItems.Length; i++) {
+            guiItems[i].SetActive(showHUD);
+        }
     }
 
     // Countdown timer for this level
