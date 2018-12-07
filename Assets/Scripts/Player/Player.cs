@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject playerBody;
     private PlayerState state;
     private ILevel level;
-    Vector3 bodyLocation;
+    private Vector3 bodyLocation;
 
     [SerializeField] private Equipable bow;
     [SerializeField] private Equipable sword;
@@ -114,12 +114,17 @@ public class Player : MonoBehaviour
     }
     public void OutOfBody()
     {
-        playerBody.transform.parent = transform.parent.transform.parent;
         bodyLocation = transform.parent.position;
+        playerBody.transform.parent = transform.parent.transform.parent;
         state = new OutOfBodyState(this);
         playerBody.transform.rotation = new Quaternion(0, 0, 0, 0);
 
     }
+    public Vector3 getBodyLocation()
+    {
+        return playerBody.transform.position;
+    }
+
     public abstract class PlayerState
     {
         protected Player player;
@@ -196,9 +201,7 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(10);
             if(player.playerBody.transform.parent != player.transform)
             {
-                player.state = new NormalState(player);
-                player.transform.parent.position = player.bodyLocation;
-                player.playerBody.transform.parent = player.transform;
+                returnToBody();
             }
         }
         public override void OnSeesInteractable()
@@ -218,10 +221,13 @@ public class Player : MonoBehaviour
             Behaviour halo = (UnityEngine.Behaviour)player.playerBody.GetComponent("Halo");
             if (halo.enabled)
             {
-                player.state = new NormalState(player);
-                player.transform.parent.position = player.bodyLocation;
-                player.playerBody.transform.parent = player.transform;
+                returnToBody();
             }
+        }
+        public void returnToBody(){
+            player.state = new NormalState(player);
+            player.transform.parent.position = player.getBodyLocation();
+            player.playerBody.transform.parent = player.transform;
         }
         public override void Use(){}
 

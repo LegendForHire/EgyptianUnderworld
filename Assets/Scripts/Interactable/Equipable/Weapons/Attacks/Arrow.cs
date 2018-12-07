@@ -43,7 +43,7 @@ public class Arrow : Attack {
     }
     public override float GetDamage()
     {
-        return speed / 100;
+        return speed / 150;
     }
     private IEnumerator DestroyAfter(int time) {
 		yield return new WaitForSeconds(time);
