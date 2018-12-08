@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FinalTalk : MonoBehaviour {
-	private bool opened = false;
-	private ILevel level;
+    [SerializeField] private CairoLevel level;
+    [SerializeField] ThroneRoomObjective objective;
+    private bool opened = false;
 	private List<string> text = new List<string> {
 		"Pharaoh:\n\nOh, have you come here to kill me? Vizier, is this another one of your schemes?",
 		"Vizier:\n\n...No... I know nothing of this plot...",
@@ -16,15 +17,15 @@ public class FinalTalk : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		level = GameObject.Find("Level").GetComponent<ILevel>();
+
 	}
 
 	// Open final text dialog
 	private void OnTriggerEnter(Collider other) {
-        if (other.name == "Arrow") return;
-        if (opened) return;
+        if (other.name == "Arrow" || opened) return;
 		level.OpenTextDialog(text);
 		opened = true;
+        objective.EnteredThroneRoom();
 	}
 
 	

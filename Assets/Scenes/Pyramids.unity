@@ -2797,6 +2797,7 @@ GameObject:
   - component: {fileID: 276504371}
   - component: {fileID: 276504375}
   - component: {fileID: 276504376}
+  - component: {fileID: 276504377}
   m_Layer: 0
   m_Name: PharaohBook
   m_TagString: ObjectInteract
@@ -2882,6 +2883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65896a2cc819a4aadba8a05043aed002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 1393835008}
+  objective: {fileID: 276504377}
 --- !u!122 &276504376
 Halo:
   m_ObjectHideFlags: 0
@@ -2893,6 +2896,17 @@ Halo:
     serializedVersion: 2
     rgba: 4294911232
   m_Size: 0.6
+--- !u!114 &276504377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276504370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4881757658e0a847a9f754a6eaf0363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &301803536
 GameObject:
   m_ObjectHideFlags: 0
@@ -4331,6 +4345,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 477075592}
+  platforms:
+  - {fileID: 875510184}
+  - {fileID: 393902842}
+  - {fileID: 1716161215}
+  - {fileID: 852055626}
 --- !u!122 &477075595
 Halo:
   m_ObjectHideFlags: 0
@@ -6288,6 +6307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 664931701}
+  platforms:
+  - {fileID: 1696057054}
 --- !u!1 &673129279
 GameObject:
   m_ObjectHideFlags: 0
@@ -7353,6 +7374,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 778222525}
+  platforms:
+  - {fileID: 469172499}
+  - {fileID: 434304663}
+  - {fileID: 1906114148}
+  - {fileID: 168634692}
 --- !u!122 &778222528
 Halo:
   m_ObjectHideFlags: 0
@@ -7535,6 +7561,7 @@ MonoBehaviour:
   - who's there
   - whos there?
   - whos there
+  passwordEntry: {fileID: 2144132458}
 --- !u!1 &807120926
 GameObject:
   m_ObjectHideFlags: 0
@@ -11293,15 +11320,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fb7dfd51a32a4043989664cad1f5637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1674981435}
   infoDisplay: {fileID: 743361164}
+  objectives:
+  - {fileID: 276504377}
+  - {fileID: 1529799756}
+  hudObjects:
+  - {fileID: 1142948048}
+  - {fileID: 1684394704}
+  - {fileID: 653884199}
+  objectiveText: {fileID: 455314156}
+  player: {fileID: 1674981435}
   passwordEntry: {fileID: 2144132458}
   objective: {fileID: 455314156}
-  crosshairs: {fileID: 1684394706}
-  health: {fileID: 153470861}
-  healthText: {fileID: 240545927}
   finalDoor: {fileID: 636148664}
-  toCairo: {fileID: 1529799753}
 --- !u!1001 &1415696294
 Prefab:
   m_ObjectHideFlags: 0
@@ -12434,6 +12465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e472f70c0214d4a27a2c9c8b2ffc01c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 1393835008}
 --- !u!122 &1496935190
 Halo:
   m_ObjectHideFlags: 0
@@ -12691,6 +12723,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1529799756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529799753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203a8a6fa9156614c8916f20b9116f65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1559937928
 GameObject:
   m_ObjectHideFlags: 0
@@ -16995,6 +17038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstPersonController: {fileID: 1459378587}
+  player: {fileID: 1674981435}
   statusText: {fileID: 1747313731}
   passwordField: {fileID: 600178161}
   submitButton: {fileID: 679351631}

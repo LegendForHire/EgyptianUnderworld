@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class ButtonObj : Interactable {
     [SerializeField] private GameObject button;
-    private ILevel level;
+    [SerializeField] private GameObject[] platforms;
 
-    private void Start() {
-        level = GameObject.Find("Level").GetComponent<ILevel>();
+    // Hide platforms
+    public override void Start() {
+        for(int i = 0; i < platforms.Length; i++) {
+            platforms[i].SetActive(false);
+        }
     }
 
     public override void Interact(Player player) {
         // Hide the button after interaction;
         button.SetActive(false);
 
-        // Pass button to level for handling
-        level.ButtonPressed(button.name);
+        // Show the platforms held by this button
+        for (int i = 0; i < platforms.Length; i++) {
+            platforms[i].SetActive(true);
+        }
     }
 }

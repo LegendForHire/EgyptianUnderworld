@@ -31,6 +31,7 @@ public abstract class Enemy : MonoBehaviour
 	private Vector3 offset = new Vector3 (0,.5f,0);
     [SerializeField] public GameObject playerBody;
     [SerializeField] public Player player;
+    [SerializeField] private GuardObjective objective;
     // Store ref to player transform so I know where to chase to.
     private Transform chaseTarget;
     internal State currentState;
@@ -40,7 +41,6 @@ public abstract class Enemy : MonoBehaviour
     internal Transform lastSeenOrHeard;
     internal float attackRange;
     internal float attackRate;
-    private ILevel level;
     [SerializeField] private Weapon weapon;
     public static float nextHit = 0;
     private bool hit = false;
@@ -49,7 +49,6 @@ public abstract class Enemy : MonoBehaviour
     internal virtual void Awake()
 	{
 		navMeshAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
-        level = GameObject.Find("Level").GetComponent<ILevel>();
         originalwayPoints = wayPoints;
     }
 
@@ -139,7 +138,8 @@ public abstract class Enemy : MonoBehaviour
         weapon.transform.parent = transform.parent.transform.parent;
         weapon.equipped = false;
         hit = true;
+        if (objective != null) objective.alive = false;
         Destroy(this.gameObject);
-        level.GuardKilled();
+        
     }
 }

@@ -5,17 +5,11 @@ using UnityEngine;
 public class PasswordButton : Interactable {
     [SerializeField] private GameObject button;
     [SerializeField] private string[] passwords;
-    private ILevel level;
-
-    // Use this for initialization
-    public void Start () {
-        level = GameObject.Find("Level").GetComponent<ILevel>();
-	}
+    [SerializeField] private PasswordEntry passwordEntry;
 
     public override void Interact(Player player) {
-        // Tell level to open password entry UI
-        level.OpenPasswordEntry(passwords);
-
+        passwordEntry.SetPasswords(passwords);
+        passwordEntry.OpenDialog();
     }
 
 }

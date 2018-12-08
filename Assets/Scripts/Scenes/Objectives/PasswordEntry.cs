@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PasswordEntry : MonoBehaviour {
     [SerializeField] private UnityStandardAssets.Characters.FirstPerson.FirstPersonController firstPersonController;
+    [SerializeField] private Player player;
     [SerializeField] private Text statusText;
     [SerializeField] private InputField passwordField;
     [SerializeField] private Button submitButton;
@@ -25,6 +26,7 @@ public class PasswordEntry : MonoBehaviour {
 	void Update () {
         // don't let the player move while this is open
         firstPersonController.canMove = false;
+        player.canUse = false;
     }
 
     // Display this dialog and make the cursor active
@@ -38,6 +40,7 @@ public class PasswordEntry : MonoBehaviour {
 
     // Closes this dialog
     public void CloseDialog() {
+        player.canUse = true;
         firstPersonController.canMove = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

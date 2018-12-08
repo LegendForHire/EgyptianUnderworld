@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     //[SerializeField] private GameObject player;
     [SerializeField] private GameObject playerBody;
     private PlayerState state;
-    private ILevel level;
     private Vector3 bodyLocation;
 
     [SerializeField] private Equipable bow;
@@ -30,7 +29,6 @@ public class Player : MonoBehaviour
         inputs.RegisterKey("f", Interact);
         inputs.RegisterKey("q", OutOfBody);
         inputs.RegisterMouseButton(Use);
-        level = GameObject.Find("Level").GetComponent<ILevel>();
 
         // Get player's weapon from player prefs
         if (PlayerPrefs.HasKey("playerWeapon") && bow != null && sword != null) {
@@ -91,11 +89,6 @@ public class Player : MonoBehaviour
         equipped = equipment;
         equipped.gameObject.transform.localPosition = new Vector3(.8f, -.2f, 1);
         equipped.transform.localEulerAngles = new Vector3(-90, 120, 0);
-
-        // Notify the level a weapon was equipped
-        if (level != null) {
-            level.GotWeapon();
-        }
 
         // Store weapon name in player prefs for persistence
         PlayerPrefs.SetString("playerWeapon", equipment.gameObject.name);
