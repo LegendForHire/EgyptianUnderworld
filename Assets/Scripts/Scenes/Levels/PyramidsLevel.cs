@@ -11,7 +11,9 @@ public class PyramidsLevel : Level {
     [SerializeField] private GameObject finalDoor;
 
     // Use this for initialization
-    void Start () {
+    protected override void Start () {
+        base.Start();
+
         infoText = new List<string> {
             "Hello again my pawn. You've now entered one of the Pyramids of Giza.\n\nUltimately you will need find the book of the Pharaoh's weaknesses, which is guarded over a spirit. DO NOT talk to this spirit. It cannot be trusted.",
             "Throughout the pyramid you will find several obstacles that stand in your way.\n\nPits of lava that will kill you instantly separate you from some of the chambers. You may need to find some way of crossing these.\n\nThere could be some buttons or switches that will help you.",

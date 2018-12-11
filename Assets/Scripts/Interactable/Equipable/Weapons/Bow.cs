@@ -30,8 +30,6 @@ public class Bow : Weapon
             Fire(40f, rot);
             ammo--;
         }
-        Debug.Log(ammo);
-        //drawBow(rot);
     }
 
     IEnumerator drawBow(Quaternion rot)

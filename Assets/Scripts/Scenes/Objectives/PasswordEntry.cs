@@ -20,6 +20,7 @@ public class PasswordEntry : MonoBehaviour {
     void Start () {
         submitButton.onClick.AddListener(CheckPassword);
         closeButton.onClick.AddListener(CloseDialog);
+        this.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -54,7 +55,7 @@ public class PasswordEntry : MonoBehaviour {
 
     // Check the user's given password against the correct answers
     private void CheckPassword() {
-        string userAnswer = passwordField.text;
+        string userAnswer = passwordField.text.ToLower().Trim();
 
         for (int i = 0; i < passwords.Length; i++) {
             // Correct answer

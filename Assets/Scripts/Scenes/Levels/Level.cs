@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public abstract class Level : MonoBehaviour {
     [SerializeField] protected InfoDisplay infoDisplay;
+    [SerializeField] protected PauseMenu pauseMenu;
     [SerializeField] protected List<Objective> objectives;
     [SerializeField] protected List<GameObject> hudObjects;
     [SerializeField] protected Text objectiveText;
@@ -13,10 +14,24 @@ public abstract class Level : MonoBehaviour {
     protected List<string> infoText;
     protected Objective currentObjective;
     protected int objectiveIndex = 0;
+    protected bool pauseOpen = false;
+
+    protected virtual void Start() {
+        pauseMenu.gameObject.SetActive(false);
+    }
 
     // Update is called once per frame
     protected virtual void Update() {
         ShowHUD(!infoDisplay.isActiveAndEnabled);
+
+        // Check for escape key press
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (pauseMenu.gameObject.activeSelf) {
+                pauseMenu.CloseDialog();
+            } else {
+                pauseMenu.OpenDialog();
+            }
+        }
 
         // Advance objectives
         if (currentObjective.IsComplete() && objectiveIndex != objectives.Count-1) {

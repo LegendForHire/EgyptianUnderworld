@@ -6,14 +6,16 @@ using UnityEngine.UI;
 public class TutorialLevel : Level {
     [SerializeField] private Text countdown;
     private bool countdownStarted = false;
-    private int timeLeft = 90;
+    private int timeLeft = 60;
 
     // Use this for initialization
-    void Start () {
+    protected override void Start () {
+        base.Start();
+
         infoText = new List<string> {
             "Hello my pawn. By now I'm sure you've noticed I'm in your head to stay.\n\nLet me explain how this arrangement is going to work. I need you to do things for me, and you will.\n\nI don't always care how you do them, but they must be done.",
             "This is all very simple. Do what I ask of you, and eventually I'll let your family go.\n\nFail, and I will kill your family... One by one.\n\nHere's your first task.",
-            "In this village you need to steal a weapon from the town center, but the guards will attack you once you do so.\n\nYou MUST kill every guard in the town. We can't have any witnesses...\n\nFinally, escape to the pyramids where we will begin your training.\n\nOh... And you only have 90 seconds to reach the pyramids once you've stolen a weapon."
+            "In this village you need to steal a weapon from the town center, but the guards will attack you once you do so.\n\nYou MUST kill every guard in the town. We can't have any witnesses...\n\nFinally, escape to the pyramids where we will begin your training.\n\nOh... And you only have 60 seconds to reach the pyramids once you've stolen a weapon."
         };
 
         infoDisplay.textList = infoText;
@@ -41,7 +43,6 @@ public class TutorialLevel : Level {
         base.Update();
 
         if (player.equipped != null && !countdownStarted) {
-            Debug.Log("Starting Countdown");
             countdownStarted = true;
             StartCoroutine(Countdown());
         }

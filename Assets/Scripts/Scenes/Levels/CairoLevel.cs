@@ -7,7 +7,9 @@ public class CairoLevel : Level {
     //private List<string> objectives = new List<string> { "Get to the throne room", "Kill the Pharaoh" };
 
     // Use this for initialization
-    void Start() {
+    protected override void Start() {
+        base.Start();
+
         infoText = new List<string> {
             "My pawn, you've done well to make it this far.\n\nYou now stand before the great city of Cairo, where I give you your final instructions.",
             "You must kill the Pharaoh. It is time for his rule to end.\n\nThis will not be easy. Countless guards stand between you and the Pharaoh. It is your choice how to get past them. You may choose to evade them, or use...\nother methods...",

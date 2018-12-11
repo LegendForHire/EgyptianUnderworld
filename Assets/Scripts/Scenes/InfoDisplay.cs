@@ -33,7 +33,9 @@ public class InfoDisplay : MonoBehaviour {
 
         // don't let the player move while this is open
         firstPersonController.canMove = false;
-	}
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     // Open this display
     public void OpenDisplay() {
