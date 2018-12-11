@@ -30245,6 +30245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d29918fd1e14ef7b177258bda7e181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  post: {fileID: 11400000, guid: df28eb41e736ce44288d5b22fe8f0b56, type: 2}
   canUse: 1
   equipped: {fileID: 0}
   playerVelocity: {x: 0, y: 0, z: 0}

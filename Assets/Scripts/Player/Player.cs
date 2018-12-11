@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private PostProcessingProfile post;
     public bool canUse = true;
     public Equipable equipped;
     protected float interactRange = 6f;
@@ -186,6 +188,11 @@ public class Player : MonoBehaviour
     {
         public OutOfBodyState(Player p) : base(p)
         {
+            // Change post processing on out of body
+            var colorSettings = player.post.colorGrading.settings;
+            colorSettings.basic.saturation = 0f;
+            player.post.colorGrading.settings = colorSettings;
+
             p.StartCoroutine(ReturnToBodyIn(10));
         }
 
@@ -221,6 +228,11 @@ public class Player : MonoBehaviour
             player.state = new NormalState(player);
             player.transform.parent.position = player.getBodyLocation();
             player.playerBody.transform.parent = player.transform;
+
+            // Update color settings
+            var colorSettings = player.post.colorGrading.settings;
+            colorSettings.basic.saturation = 1f;
+            player.post.colorGrading.settings = colorSettings;
         }
         public override void Use(){}
 
