@@ -26,7 +26,7 @@ public class InfoDisplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (textList == null) return;
+        if (textList == null || textList.Count == 0) return;
 
         // show the info at the current item
         info.text = textList[currentItem];

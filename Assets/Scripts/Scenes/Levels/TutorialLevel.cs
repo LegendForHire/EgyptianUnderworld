@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Written by Ryan Kugel & Wibbs
+ */
 public class TutorialLevel : Level {
     [SerializeField] private Text countdown;
     private bool countdownStarted = false;

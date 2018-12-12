@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * Written by Ryan Kugel
+ */
 public abstract class Objective : MonoBehaviour {
     protected string description;
     protected string failureText;

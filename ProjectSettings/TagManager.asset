@@ -14,6 +14,7 @@ TagManager:
   - FamilyEnd
   - PharaohEnd
   - VizierEnd
+  - ThroneRoom
   layers:
   - Default
   - TransparentFX

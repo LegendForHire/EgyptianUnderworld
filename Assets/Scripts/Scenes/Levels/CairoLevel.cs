@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/*
+ * Written by Ryan Kugel & Wibbs
+ */
 public class CairoLevel : Level {
-    //private List<string> objectives = new List<string> { "Get to the throne room", "Kill the Pharaoh" };
-
+  
     // Use this for initialization
     protected override void Start() {
         base.Start();

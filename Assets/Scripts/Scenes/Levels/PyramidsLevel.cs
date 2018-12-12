@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /*
- *   Written by Ryan Kugel
+ *   Written by Ryan Kugel & Wibbs
  */
 public class PyramidsLevel : Level {
     [SerializeField] private PasswordEntry passwordEntry;

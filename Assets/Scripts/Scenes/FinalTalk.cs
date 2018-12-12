@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FinalTalk : MonoBehaviour {
-    [SerializeField] private CairoLevel level;
-    [SerializeField] ThroneRoomObjective objective;
+    [SerializeField] private ThroneLevel level;
+    [SerializeField] SpeakToObjective objective;
     private bool opened = false;
 	private List<string> text = new List<string> {
 		"Pharaoh:\n\nOh, have you come here to kill me? Vizier, is this another one of your schemes?",
@@ -25,7 +25,7 @@ public class FinalTalk : MonoBehaviour {
         if (other.name == "Arrow" || opened) return;
 		level.OpenTextDialog(text);
 		opened = true;
-        objective.EnteredThroneRoom();
+        objective.SpokenToPharaoh();
 	}
 
 	

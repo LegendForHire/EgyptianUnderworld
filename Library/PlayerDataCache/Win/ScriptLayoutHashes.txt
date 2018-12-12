@@ -12,6 +12,7 @@ Assets/Scenes/DeathScreen.unity
 Assets/Scenes/FamilyEnd.unity
 Assets/Scenes/VizierEnd.unity
 Assets/Scenes/PharaohEnd.unity
+Assets/Scenes/ThroneRoom.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 95c241412033d75da3b2703947abc86e Assembly-CSharp.dll:UnityStandardAssets.Effects.ExtinguishableParticleSystem
@@ -111,6 +112,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+98f0dfd2378729c082be8d0dd8ea0d71 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingBehaviour
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.Vehicles.Ball.BallUserControl
 109ca2c01d48b39c29df869bbd900f15 Assembly-CSharp.dll:UnityStandardAssets.Cameras.AutoCam
 24a57e6b1bd1739bc8d9cf1cbf67a532 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
@@ -185,21 +187,23 @@ d947b95c171314b81b313a2f4ffd0411 Assembly-CSharp.dll:UnityStandardAssets.CrossPl
 509b006c3f9ac97ba6e2106f8e9b0b10 Assembly-CSharp.dll:UnityStandardAssets.Characters.FirstPerson.HeadBob
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl
 a455c7a94d636e997cf13415fea7bbb1 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMoveAndRotate
-99a6abda390455c2df72041e41b3d97c Assembly-CSharp.dll:.FinalTalk
+38059ed84165e8eb7175f9d4c5d0cf2b Assembly-CSharp.dll:.FinalTalk
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.InputManager
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.ForcedReset
 202ddcdf9392f5f9809cc33a273f8b5e Assembly-CSharp.dll:UnityStandardAssets.Utility.SmoothFollow
+cd422eb1784c1fe22bb1d4cbb45cf7c9 Assembly-CSharp.dll:.PauseMenu
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.BookObjective
 0736bfb9ec089761933423cf0b597c8b Assembly-CSharp.dll:.Sword
 89f2f1b6cbd3f1f4e5b535d9d703ea21 Assembly-CSharp.dll:.Arrow
 9d2dcb93c6d3966022839f0e4ec3fa63 Assembly-CSharp.dll:UnityStandardAssets.Water.PlanarReflection
 1827d5101bce4e14ce638499f1432513 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.ScreenOverlay
+e2bc6ef764fff21ff1e9db5ef924d331 Assembly-CSharp.dll:.ExampleWheelController
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.Water.Displace
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SceneChanger
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.CrossPlatformInput.MobileControlRig
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.Utility.ObjectResetter
-cd27cc03b0c4a5f279d9f7e507e57602 Assembly-CSharp.dll:.Player
+d1a4d7775261f1a9071815b9abcffdc8 Assembly-CSharp.dll:.Player
 16ce7edbc610086bae3b4704c4258247 Assembly-CSharp.dll:UnityStandardAssets.Effects.AfterburnerPhysicsForce
 98a6852fb2e252525cbb713143ddd380 Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.DepthOfField
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
@@ -273,6 +277,7 @@ ae0fa6aaa5e980f190fd2479500fab1a Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 846e13f6b509bedbd77270d9c9d5070d Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.Vortex
 a8235c217b6cf2fe27dca896710ae4ec Assembly-CSharp.dll:UnityStandardAssets.Effects.WaterHoseParticles
 418573629fcb14385d878f464be8af39 Assembly-CSharp.dll:.PharaohBook
+713f094d38dde97adcca89d1fad847c0 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
 57912ed904bab12391f93374a5aaeea7 Assembly-CSharp.dll:.SwordSwing
 73653d4434dc598f6fa77cebdf44aed0 Assembly-CSharp.dll:.GuardsObjective
 806055d398aa23f6f7f08f3cf50a6f1b Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.CameraMotionBlur
@@ -306,7 +311,5 @@ f59ca19b2477a0f8545617e6a1dec4b4 Assembly-CSharp.dll:UnityStandardAssets.ImageEf
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.EnterCloudObjective
 f08ff50d3b9751c3a404b669950a7e5b Assembly-CSharp.dll:.DeathScreen
 695c9335429d4798b6f74ca73c042ff4 Assembly-CSharp.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-98f0dfd2378729c082be8d0dd8ea0d71 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingBehaviour
-e2bc6ef764fff21ff1e9db5ef924d331 Assembly-CSharp.dll:.ExampleWheelController
-713f094d38dde97adcca89d1fad847c0 Assembly-CSharp.dll:UnityEngine.PostProcessing.PostProcessingProfile
-cd422eb1784c1fe22bb1d4cbb45cf7c9 Assembly-CSharp.dll:.PauseMenu
+757a32404c334d519f27499c31d990b3 Assembly-CSharp.dll:.ThroneLevel
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SpeakToObjective
